@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#E4D9E3"
-    tools:context=".HomeActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E4D9E3">
 
-    <ScrollView
+<ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <!--    <Gallery-->
-        <!--        android:id="@+id/gallery1"-->
-        <!--        android:layout_width="fill_parent"-->
-        <!--        android:layout_height="wrap_content" />-->
+    <RelativeLayout
+        android:id="@+id/idSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.koddev.viewflipper.HomeActivity">
 
     #Galerie
 
+        <ViewFlipper
+            android:id="@+id/v_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="40dp" />
     <ImageButton
         android:id="@+id/custom"
         android:layout_width="105dp"
@@ -75,17 +75,6 @@
 
 
     </ImageButton>
-
-    <ImageView
-        android:layout_width="450dp"
-        android:layout_height="350dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="353dp"
-        android:background="@drawable/f1"></ImageView>
 
     <TextView
         android:layout_width="match_parent"
