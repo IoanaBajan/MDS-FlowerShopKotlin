@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="#141315">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher_background"></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="SIGN UP PAGE"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/colorAccent"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="First Name:"
+            android:textSize="20dp"
+            >
+        </TextView>
+        <EditText
+            android:layout_marginStart="20dp"
+            android:id="@+id/idFirstNameR"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:textColor="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            >
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Last Name:"
+            android:textSize="20dp"
+            >
+        </TextView>
+        <EditText
+            android:layout_marginStart="20dp"
+            android:id="@+id/idLastNameR"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:textColor="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            >
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Username:"
+            android:textSize="20dp"
+            >
+        </TextView>
+        <EditText
+            android:layout_marginStart="20dp"
+            android:id="@+id/idUsernameR"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:textColor="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            >
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Password:"
+            android:textSize="20dp"
+            >
+        </TextView>
+        <EditText
+            android:layout_marginStart="20dp"
+            android:id="@+id/idPasswordR"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:textColor="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            >
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="E-mail:"
+            android:textSize="20dp"
+            >
+        </TextView>
+        <EditText
+            android:layout_marginStart="20dp"
+            android:id="@+id/idMailR"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:textColor="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            >
+        </EditText>
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:text="REGISTER"
+            android:id="@+id/idRegisterR"
+            android:textSize="15sp"
+            android:textColor="#141315"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="40dp"
+            >
+
+        </Button>
+
+
+</LinearLayout>
+</ScrollView>
+
+
+</RelativeLayout>
