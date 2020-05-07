@@ -16,7 +16,7 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var idLastName: EditText
     lateinit var idFirstName: EditText
     lateinit var idRegister: Button
-    lateinit var idConfirm: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -27,7 +27,6 @@ class SignUpActivity : AppCompatActivity() {
         idLastName = findViewById(R.id.idLastName)
         idFirstName = findViewById(R.id.idFirstName)
         idRegister = findViewById(R.id.idRegister)
-        idConfirm = findViewById(R.id.idConfirmPasswordR)
 
         idRegister.setOnClickListener {
             val intent = Intent(this, SignUpActivity:: class.java)
@@ -38,34 +37,18 @@ class SignUpActivity : AppCompatActivity() {
     private fun saveClient(intent: Intent){
         val firstName = idFirstName.text.toString().trim()
         val lastName = idLastName.text.toString().trim()
-        val username = idUsernameR.text.toString().trim()
-        val password = idPasswordR.text.toString().trim()
-        val confirm = idConfirm.text.toString().trim()
+        val username = idUsernameR.text.toString().trim();
+        val password = idPasswordR.text.toString().trim();
         val mail = idEmail.text.toString().trim();
 
         val ref = FirebaseDatabase.getInstance().getReference("clients")
 
-        if(password.equals(confirm)) {
-            if(password.length >= 4){
-                if(mail.contains("@")) {
-                    val clientId = ref.push().key
+        val clientId = ref.push().key
 
-                    val client = Client(clientId.toString(), firstName, lastName, username, password, mail)
+        val client = Client(clientId.toString(), firstName, lastName, username, password, mail)
 
-                    ref.child(clientId.toString()).setValue(client).addOnCompleteListener() {
-                        Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
-                    }
-                }
-                else{
-                    Toast.makeText(applicationContext, "Not a valid email address", Toast.LENGTH_LONG).show()
-                }
-            }
-            else{
-                Toast.makeText(applicationContext, "Password shoul have minimum 4 characters", Toast.LENGTH_LONG).show()
-            }
-        }
-        else{
-            Toast.makeText(applicationContext, "Passwords don't match", Toast.LENGTH_LONG).show()
+        ref.child(clientId.toString()).setValue(client).addOnCompleteListener(){
+            Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
         }
 
     }

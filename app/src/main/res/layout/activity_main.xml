@@ -21,8 +21,7 @@
             android:layout_width="156dp"
             android:layout_height="157dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo"
-            android:contentDescription="TODO"></ImageView>
+            android:src="@drawable/floare"></ImageView>
 
         <EditText
             android:layout_marginStart="20dp"
@@ -35,9 +34,7 @@
             android:textColor="@color/colorAccent"
             android:drawablePadding="10dp"
             android:padding="10dp"
-            android:hint="Username"
-            android:inputType="text"
-            android:autofillHints="">
+            android:hint="Username">
         </EditText>
 
         <EditText
@@ -51,9 +48,7 @@
             android:layout_height="wrap_content"
             android:drawablePadding="10dp"
             android:padding="10dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:autofillHints="">
+            android:hint="Password">
 
         </EditText>
         
