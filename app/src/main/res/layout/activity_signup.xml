@@ -30,11 +30,13 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
-            android:text="SIGN UP PAGE"
+            android:text="@string/sign_up_page"
             android:textAlignment="center"
             android:textSize="30dp"
             android:textColor="@color/colorAccent"
-            >
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_horizontal">
         </TextView>
 
         <TextView
@@ -49,7 +51,7 @@
         </TextView>
         <EditText
             android:layout_marginStart="20dp"
-            android:id="@+id/idFirstNameR"
+            android:id="@+id/idFirstName"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
@@ -72,7 +74,7 @@
         </TextView>
         <EditText
             android:layout_marginStart="20dp"
-            android:id="@+id/idLastNameR"
+            android:id="@+id/idLastName"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
@@ -104,7 +106,7 @@
             android:textColor="@color/colorPrimary"
             android:drawablePadding="10dp"
             android:padding="10dp"
-            >
+            android:inputType="text">
         </EditText>
         <TextView
             android:layout_width="match_parent"
@@ -112,7 +114,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
-            android:text="Password:"
+            android:text="@string/password"
             android:textSize="20dp"
             >
         </TextView>
@@ -127,7 +129,7 @@
             android:textColor="@color/colorPrimary"
             android:drawablePadding="10dp"
             android:padding="10dp"
-            >
+            android:autofillHints="">
         </EditText>
 
         <TextView
@@ -142,7 +144,7 @@
         </TextView>
         <EditText
             android:layout_marginStart="20dp"
-            android:id="@+id/idMailR"
+            android:id="@+id/idEmail"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
@@ -151,7 +153,8 @@
             android:textColor="@color/colorPrimary"
             android:drawablePadding="10dp"
             android:padding="10dp"
-            >
+            android:autofillHints=""
+            android:inputType="text">
         </EditText>
 
 
@@ -161,8 +164,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button2_background"
-            android:text="REGISTER"
-            android:id="@+id/idRegisterR"
+            android:text="@string/register"
+            android:id="@+id/idRegister"
             android:textSize="15sp"
             android:textColor="#141315"
             android:layout_marginStart="80dp"
