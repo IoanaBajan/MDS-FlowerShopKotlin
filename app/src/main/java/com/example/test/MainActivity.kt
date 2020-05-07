@@ -2,7 +2,6 @@ package com.example.test
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -52,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                                     "Succes login!",
                                     Toast.LENGTH_LONG
                                 ).show()
+                                val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                                startActivity(intent)
                             } else {
                                 Toast.makeText(
                                     applicationContext,
