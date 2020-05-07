@@ -2,7 +2,9 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel_3_xl" />
+      </config>
     </shared>
   </component>
   <component name="ChangeListManager">
@@ -26,20 +28,26 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Test" />
+  </component>
   <component name="ProjectId" id="1aO7YxBX2AT3IBa90hpbh2ApOgQ" />
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="HYF0219129007563" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-13T15:08:19.734Z" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/res/layout" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Anul 2\MDS\Test\app\src\main\res\drawable-v24" />
-    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.example.test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Anul 2\MDS\Test\app\src\main\res\layout" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Anul 2\MDS\home - Copy\app\src\main\res\drawable" />
+      <recent name="D:\Anul 2\MDS\Test\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunDashboard">
