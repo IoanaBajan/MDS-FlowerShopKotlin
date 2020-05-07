@@ -159,6 +159,7 @@
         android:layout_height="113dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+
         android:layout_marginTop="500dp"
         android:layout_marginEnd="38dp"
         android:layout_marginRight="38dp"
@@ -1203,7 +1204,6 @@
         android:text="120 lei"
         android:textColor="#141315"
         android:textSize="15dp"></TextView>
-
 
 </RelativeLayout>
     </ScrollView>
