@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E4D9E3"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutReset">
+
+
+    <ImageButton
+        android:id="@+id/customBouquet"
+        android:layout_width="105dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/buton3"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_toEndOf="@+id/customBouquet"
+        android:layout_toRightOf="@+id/customBouquet"
+        android:background="@color/colorAccent"
+        android:src="@drawable/buton4">
+
+    </ImageButton>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/home_icon"
+        android:id="@+id/homeButton">
+
+    </ImageButton>
+
+    <ImageButton
+        android:layout_width="110dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginRight="-2dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/buton1">
+    </ImageButton>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:text="My profile"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/SignOut"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/colorAccent"
+        android:text="Sign Out"
+        android:textColor="#141315"
+        android:textSize="20dp"
+    />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/colorAccent"
+        android:text="Reset password"
+        android:textColor="#141315"
+        android:textSize="20dp"/>
+
+
+</RelativeLayout>
+    </ScrollView>>
+</androidx.constraintlayout.widget.ConstraintLayout>

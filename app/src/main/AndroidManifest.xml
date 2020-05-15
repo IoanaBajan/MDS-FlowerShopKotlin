@@ -31,6 +31,12 @@
         <activity android:name=".PlaceOrderActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
+        <activity android:name=".BouquetActivity" android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".ProfileActivity" android:windowSoftInputMode="adjustResize">
+        </activity>
+
     </application>
 
 </manifest>

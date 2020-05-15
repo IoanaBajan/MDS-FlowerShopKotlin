@@ -22,7 +22,7 @@
             android:layout_height="350dp"
             android:layout_marginTop="40dp" />
     <ImageButton
-        android:id="@+id/custom"
+        android:id="@+id/customBouquet"
         android:layout_width="105dp"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"
@@ -41,14 +41,15 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="96dp"
         android:layout_marginRight="96dp"
-        android:layout_toEndOf="@+id/custom"
-        android:layout_toRightOf="@+id/custom"
+        android:layout_toEndOf="@+id/customBouquet"
+        android:layout_toRightOf="@+id/customBouquet"
         android:background="@color/colorAccent"
         android:src="@drawable/buton4">
 
     </ImageButton>
 
     <ImageButton
+        android:id="@+id/profile"
         android:layout_width="100dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"
