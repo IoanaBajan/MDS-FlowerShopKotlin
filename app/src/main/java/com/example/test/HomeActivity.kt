@@ -20,6 +20,18 @@ class HomeActivity : AppCompatActivity() {
         for (img in myImageList) {
             flipperImages(img)
         }
+
+        val idcustom: ImageButton = findViewById(R.id.customBouquet)
+        idcustom.setOnClickListener {
+            val intent = Intent(this@HomeActivity, BouquetActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnprofile: ImageButton= findViewById(R.id.profile)
+        btnprofile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun flipperImages(image:Int) {
