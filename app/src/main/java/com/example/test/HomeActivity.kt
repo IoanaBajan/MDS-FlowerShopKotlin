@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewManager
 import android.widget.*
+import com.example.test.R.id.cart
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,6 +19,7 @@ class HomeActivity : AppCompatActivity() {
     lateinit var v_flipper: ViewFlipper
     lateinit var searchBtn: ImageButton
     lateinit var searchBar: EditText
+    var products: ArrayList<Item> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,248 @@ class HomeActivity : AppCompatActivity() {
 
         searchBtn.setOnClickListener {
             showSearchBox()
+        }
+        val shopCart: ImageButton = findViewById(R.id.cart)
+        shopCart.setOnClickListener {
+            val intent = Intent(this@HomeActivity, CartActivity::class.java)
+            intent.putExtra("products", products)
+            startActivity(intent)
+        }
+
+
+        val idbutton1: Button = findViewById(R.id.button1)
+        val idbutton2: Button = findViewById(R.id.button2)
+        val idbutton3: Button = findViewById(R.id.button3)
+        val idbutton4: Button = findViewById(R.id.button4)
+        val idbutton5: Button = findViewById(R.id.button5)
+        val idbutton6: Button = findViewById(R.id.button6)
+        val idbutton7: Button = findViewById(R.id.button7)
+        val idbutton8: Button = findViewById(R.id.button8)
+        val idbutton9: Button = findViewById(R.id.button9)
+        val idbutton10: Button = findViewById(R.id.button10)
+        val idbutton11: Button = findViewById(R.id.button11)
+        val idbutton12: Button = findViewById(R.id.button12)
+        val idbutton13: Button = findViewById(R.id.button13)
+        val idbutton14: Button = findViewById(R.id.button14)
+        val idbutton15: Button = findViewById(R.id.button15)
+        val idbutton16: Button = findViewById(R.id.button16)
+        val idbutton17: Button = findViewById(R.id.button17)
+        val idbutton18: Button = findViewById(R.id.button18)
+        idbutton1.setOnClickListener {
+            var i = Item("Scented Lavender","230","f1")
+            if(products.find{it.name == "Scented Lavender"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton2.setOnClickListener {
+            var i = Item("Simply Pink","150","f1")
+            if(products.find{it.name == "Simply Pink"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton3.setOnClickListener {
+            var i = Item("Rose bud","140","f1")
+            if(products.find{it.name == "Rose bud"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton4.setOnClickListener {
+            var i = Item("Peonies","250","f1")
+            if(products.find{it.name == "Peonies"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton5.setOnClickListener {
+            var i = Item("Romantic","300","f1")
+            if(products.find{it.name == "Romantic"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton6.setOnClickListener {
+            var i = Item("Blue Bell","160","f1")
+            if(products.find{it.name == "Blue Bell"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton7.setOnClickListener {
+            var i = Item("Blues","250","f1")
+            if(products.find{it.name == "Blues"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton8.setOnClickListener {
+            var i = Item("Casa Blanca","125","f1")
+            if(products.find{it.name == "Casa Blanca"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton9.setOnClickListener {
+            var i = Item("Citrus","200","f1")
+            if(products.find{it.name == "Citrus"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton10.setOnClickListener {
+            var i = Item("Glaze","150","f1")
+            if(products.find{it.name == "Glaze"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton11.setOnClickListener {
+            var i = Item("Godess","250","f1")
+            if(products.find{it.name == "Godess"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton12.setOnClickListener {
+            var i = Item("Purity","130","f1")
+            if(products.find{it.name == "Purity"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton13.setOnClickListener {
+            var i = Item("Snapdragons","150","f1")
+            if(products.find{it.name == "Snapdragons"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton14.setOnClickListener {
+            var i = Item("Scented Spring","170","f1")
+            if(products.find{it.name == "Scented Spring"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton15.setOnClickListener {
+            var i = Item("Secret Garden","230","f1")
+            if(products.find{it.name == "Secret Garden"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton16.setOnClickListener {
+            var i = Item("Star Gazer","200","f1")
+            if(products.find{it.name == "Star Gazer"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton17.setOnClickListener {
+            var i = Item("Topaz","200","f1")
+            if(products.find{it.name == "Topaz"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        idbutton18.setOnClickListener {
+            var i = Item("Tulips","110","f1")
+            if(products.find{it.name == "Tulips"} == null)
+                products.add(i)
+            else{
+                Toast.makeText(
+                    applicationContext,
+                    "This item is already in the shopping cart!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
         }
 
     }
@@ -201,7 +445,6 @@ class HomeActivity : AppCompatActivity() {
                             bouquet.child("price").getValue().toString(),
                             bouquet.child("flowers").getValue().toString()
                         )
-
                         if (bouquetBean.flowers.contains(inpName)) {
                             println(bouquetBean.flowers + " " + bouquetBean.name)
 

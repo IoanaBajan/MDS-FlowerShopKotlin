@@ -66,6 +66,7 @@
                 android:id="@+id/profile"/>
 
             <ImageButton
+                android:id="@+id/cart"
                 android:layout_width="110dp"
                 android:layout_height="47dp"
                 android:layout_alignParentTop="true"
@@ -74,7 +75,7 @@
                 android:layout_marginEnd="-2dp"
                 android:layout_marginRight="-2dp"
                 android:background="@color/colorAccent"
-                android:src="@drawable/buton1"/>
+                android:src="@drawable/buton1" />
 
 
 
