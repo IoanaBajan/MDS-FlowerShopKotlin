@@ -1,1212 +1,1223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:background="#E4D9E3">
 
-<ScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@+id/idSearchLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context="com.koddev.viewflipper.HomeActivity">
-
-    #Galerie
-
-        <ViewFlipper
-            android:id="@+id/v_flipper"
+        <RelativeLayout
+            android:id="@+id/idSearchLayout"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_marginTop="40dp" />
-    <ImageButton
-        android:id="@+id/customBouquet"
-        android:layout_width="105dp"
-        android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/buton3"></ImageButton>
-
-    <ImageButton
-        android:layout_width="110dp"
-        android:layout_height="47dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:layout_toEndOf="@+id/customBouquet"
-        android:layout_toRightOf="@+id/customBouquet"
-        android:background="@color/colorAccent"
-        android:src="@drawable/buton4">
-
-    </ImageButton>
-
-    <ImageButton
-        android:id="@+id/profile"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginLeft="105dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/user">
-
-    </ImageButton>
-
-    <ImageButton
-        android:layout_width="110dp"
-        android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginRight="-2dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/buton1">
-
-
-    </ImageButton>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:fontFamily="cursive"
-        android:gravity="center_horizontal"
-        android:text="Our products"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30dp"></TextView>
-
-    #Produs unu
-
-    <ImageView
-        android:id="@+id/f1"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f4"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price1"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/f1"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button1"
-        android:layout_toRightOf="@+id/button1"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f1"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:text="Scented Lavander"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs doi
-
-    <ImageView
-        android:id="@+id/f2"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f2"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Simply Pink"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-    #Produs trei
-
-    <ImageView
-        android:id="@+id/prod3"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="700dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f3"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price3"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod3"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button3"
-        android:layout_toRightOf="@+id/button3"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod3"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name3"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod3"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Rose Bud"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs patru
-
-    <ImageView
-        android:id="@+id/f4"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="700dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f1"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Peonies"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-
-    #Produs cinci
-
-    <ImageView
-        android:id="@+id/prod5"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="900dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f5"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price5"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod5"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button5"
-        android:layout_toRightOf="@+id/button5"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod5"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name5"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod5"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Romantic"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs sase
-
-    <ImageView
-        android:id="@+id/f6"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="900dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f6"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f6"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Blue bell"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f6"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f6"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-    #Produs sapte
-
-    <ImageView
-        android:id="@+id/prod7"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="1100dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f7"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price7"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod7"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button7"
-        android:layout_toRightOf="@+id/button7"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod7"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name7"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod7"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Blues"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs opt
-
-    <ImageView
-        android:id="@+id/f8"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="1100dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f8"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f8"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Casa Blanca"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f8"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f8"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-    #Produs noua
-
-    <ImageView
-        android:id="@+id/prod9"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="1300dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f9"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price9"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod9"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button9"
-        android:layout_toRightOf="@+id/button9"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod9"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name9"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod9"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Citrus"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs zece
-
-    <ImageView
-        android:id="@+id/f10"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="1300dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f10"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f10"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Glaze"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f10"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f10"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-    #Produs 11
-
-    <ImageView
-        android:id="@+id/prod11"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="1500dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f11"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price11"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod11"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button11"
-        android:layout_toRightOf="@+id/button11"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod11"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name11"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod11"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Godess"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs 12
-
-    <ImageView
-        android:id="@+id/f12"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="1500dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f12"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f12"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Purity"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f12"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f12"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-    #Produs 13
-
-    <ImageView
-        android:id="@+id/prod13"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="1700dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f13"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price13"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod13"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button13"
-        android:layout_toRightOf="@+id/button13"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod13"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name13"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod13"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Snapdragons"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs 14
-
-    <ImageView
-        android:id="@+id/f14"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="1700dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f14"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f14"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Scented Spring"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f14"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f14"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-    #Produs 15
-
-    <ImageView
-        android:id="@+id/prod15"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="1900dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f15"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price15"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod15"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button15"
-        android:layout_toRightOf="@+id/button15"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod15"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name15"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod15"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Secret Garden"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    #produs 16
-
-    <ImageView
-        android:id="@+id/f16"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="1900dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f16"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f16"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Star Gazer"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button16"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f16"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f16"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-    #Produs 17
-
-    <ImageView
-        android:id="@+id/prod17"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="2100dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f17"></ImageView>
-
-
-    <TextView
-        android:id="@+id/price17"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/prod17"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/button17"
-        android:layout_toRightOf="@+id/button17"
-        android:text="130 lei"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/prod17"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-    <TextView
-        android:id="@+id/name17"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/prod17"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="7dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:text="Topaz"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-    #produs 18
-
-    <ImageView
-        android:id="@+id/f18"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="2100dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/f18"></ImageView>
-
-
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/f18"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:gravity="center_horizontal"
-        android:text="Tulips"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"></TextView>
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/f18"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:background="@color/colorAccent"
-        android:text="Add to cart"
-        android:textColor="#141315"
-        android:textSize="13dp"></Button>
-
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/f18"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="120 lei"
-        android:textColor="#141315"
-        android:textSize="15dp"></TextView>
-
-</RelativeLayout>
+            android:layout_height="wrap_content"
+            tools:context="com.koddev.viewflipper.HomeActivity">
+
+
+            #Galerie
+
+            <ViewFlipper
+                android:id="@+id/v_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="40dp" />
+
+            <ImageButton
+                android:id="@+id/customBouquet"
+                android:layout_width="105dp"
+                android:layout_height="47dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorAccent"
+                android:src="@drawable/buton3"/>
+
+            <ImageButton
+                android:id="@+id/idSearchBtn"
+                android:layout_width="100dp"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginRight="96dp"
+                android:layout_toEndOf="@+id/customBouquet"
+                android:layout_toRightOf="@+id/customBouquet"
+                android:background="@color/colorAccent"
+                android:src="@drawable/buton4"/>
+
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="47dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="105dp"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorAccent"
+                android:src="@drawable/user"
+                android:id="@+id/profile"/>
+
+            <ImageButton
+                android:layout_width="110dp"
+                android:layout_height="47dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginRight="-2dp"
+                android:background="@color/colorAccent"
+                android:src="@drawable/buton1"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="430dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="cursive"
+                android:gravity="center_horizontal"
+                android:text="Our products"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"/>
+
+            #Produs unu
+
+            <ImageView
+                android:id="@+id/f1"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/f4" />
+
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/f1"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button1"
+                android:layout_toRightOf="@+id/button1"
+                android:text="230 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/ScentedLavander"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f1"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:text="Scented Lavander"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs doi
+
+            <ImageView
+                android:id="@+id/f2"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="500dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f2"/>
+
+
+            <TextView
+                android:id="@+id/SimplyPink"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Simply Pink"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="150 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+            #Produs trei
+
+            <ImageView
+                android:id="@+id/prod3"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="700dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f3"/>
+
+
+            <TextView
+                android:id="@+id/price3"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod3"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button3"
+                android:layout_toRightOf="@+id/button3"
+                android:text="140 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod3"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name3"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod3"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Rose Bud"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs patru
+
+            <ImageView
+                android:id="@+id/f4"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="700dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f1"/>
+
+
+            <TextView
+                android:id="@+id/Peonies"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Peonies"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="250 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+
+            #Produs cinci
+
+            <ImageView
+                android:id="@+id/prod5"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="900dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f5"/>
+
+
+            <TextView
+                android:id="@+id/price5"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod5"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button5"
+                android:layout_toRightOf="@+id/button5"
+                android:text="300 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod5"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name5"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod5"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Romantic"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs sase
+
+            <ImageView
+                android:id="@+id/f6"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="900dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f6"/>
+
+
+            <TextView
+                android:id="@+id/BlueBell"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f6"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Blue bell"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f6"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f6"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="160 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+            #Produs sapte
+
+            <ImageView
+                android:id="@+id/prod7"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1100dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f7"/>
+
+
+            <TextView
+                android:id="@+id/price7"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod7"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button7"
+                android:layout_toRightOf="@+id/button7"
+                android:text="250 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod7"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name7"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod7"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Blues"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs opt
+
+            <ImageView
+                android:id="@+id/f8"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1100dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f8"/>
+
+
+            <TextView
+                android:id="@+id/CasaBlanca"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f8"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Casa Blanca"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f8"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f8"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="125 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+            #Produs noua
+
+            <ImageView
+                android:id="@+id/prod9"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1300dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f9"/>
+
+
+            <TextView
+                android:id="@+id/price9"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod9"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button9"
+                android:layout_toRightOf="@+id/button9"
+                android:text="200 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod9"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name9"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod9"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Citrus"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs zece
+
+            <ImageView
+                android:id="@+id/f10"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1300dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f10"/>
+
+
+            <TextView
+                android:id="@+id/Glaze"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f10"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Glaze"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f10"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f10"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="150 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+            #Produs 11
+
+            <ImageView
+                android:id="@+id/prod11"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1500dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f11"/>
+
+
+            <TextView
+                android:id="@+id/price11"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod11"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button11"
+                android:layout_toRightOf="@+id/button11"
+                android:text="250 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod11"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name11"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod11"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Godess"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs 12
+
+            <ImageView
+                android:id="@+id/f12"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1500dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f12"/>
+
+
+            <TextView
+                android:id="@+id/Purity"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f12"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Purity"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f12"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f12"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="130 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+            #Produs 13
+
+            <ImageView
+                android:id="@+id/prod13"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1700dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f13"/>
+
+
+            <TextView
+                android:id="@+id/price13"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod13"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button13"
+                android:layout_toRightOf="@+id/button13"
+                android:text="150 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod13"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name13"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod13"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Snapdragons"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs 14
+
+            <ImageView
+                android:id="@+id/f14"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1700dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f14"/>
+
+
+            <TextView
+                android:id="@+id/ScentedSpring"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f14"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Scented Spring"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f14"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f14"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="170 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+            #Produs 15
+
+            <ImageView
+                android:id="@+id/prod15"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1900dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f15"/>
+
+
+            <TextView
+                android:id="@+id/price15"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod15"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button15"
+                android:layout_toRightOf="@+id/button15"
+                android:text="230 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod15"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name15"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod15"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Secret Garden"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs 16
+
+            <ImageView
+                android:id="@+id/f16"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1900dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f16"/>
+
+
+            <TextView
+                android:id="@+id/StarGazer"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f16"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Star Gazer"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f16"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f16"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="200 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+            #Produs 17
+
+            <ImageView
+                android:id="@+id/prod17"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="2100dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f17"/>
+
+
+            <TextView
+                android:id="@+id/price17"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/prod17"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/button17"
+                android:layout_toRightOf="@+id/button17"
+                android:text="200 lei"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/prod17"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/name17"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/prod17"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Topaz"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            #produs 18
+
+            <ImageView
+                android:id="@+id/f18"
+                android:layout_width="130dp"
+                android:layout_height="113dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2100dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/f18"/>
+
+
+            <TextView
+                android:id="@+id/Tulips"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/f18"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginRight="41dp"
+                android:gravity="center_horizontal"
+                android:text="Tulips"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/f18"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@color/colorAccent"
+                android:text="Add to cart"
+                android:textColor="#141315"
+                android:textSize="13dp"/>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/f18"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:text="110 lei"
+                android:textColor="#141315"
+                android:textSize="15dp"/>
+
+
+        </RelativeLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
