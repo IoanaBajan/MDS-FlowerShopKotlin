@@ -2,20 +2,16 @@ package com.example.tes
 
 import com.example.test.Item
 import com.example.test.R
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
 import kotlinx.android.synthetic.main.cart_item_layout.view.*
-import java.sql.Types.NULL
-import kotlin.properties.Delegates
 
 class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
     var items: List<Item> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ItemViewHolder(
@@ -24,12 +20,22 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override  fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
             is ItemViewHolder -> {
                 holder.bind(items.get(position))
             }
         }
+
+
+    }
+
+    fun deleteItem(pos: Int){
+        println("-----------" + items.toString())
+        items.drop(pos)
+        this.notifyDataSetChanged()
+        println(items.toString())
+
     }
 
     override fun getItemCount(): Int {
@@ -46,7 +52,16 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         val price = itemView.calc_price
         val name = itemView.txt_product_name
         var amount = itemView.amount
+        var btnDelete = itemView.delete
+
         fun bind(item: Item){
+            btnDelete.setOnClickListener {
+                layoutPosition.also { currentPosition ->
+                        var i: ItemRecyclerAdapter = ItemRecyclerAdapter()
+                            i.deleteItem(currentPosition)
+                }
+
+            }
             item.totalPrice = item.price!!.toInt()
             item.amount = 1
             amount.setOnValueChangeListener { view, oldValue, newValue ->
@@ -66,6 +81,8 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             println(item.amount!!)
             name.setText(item.name)
             price.setText(item.price)
+
+
 
             val requestOption = RequestOptions()
                 .placeholder(R.drawable.fifi)
@@ -145,5 +162,6 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     .into(item_image)
             }
         }
+
     }
 }

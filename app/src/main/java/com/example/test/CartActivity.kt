@@ -23,7 +23,6 @@ class CartActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shoppingcart)
 
-
         if (intent != null) {
             itemList = intent.getSerializableExtra("products") as ArrayList<Item>
 
