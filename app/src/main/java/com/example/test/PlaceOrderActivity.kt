@@ -1,12 +1,12 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputFilter.LengthFilter
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.load.engine.bitmap_recycle.IntegerArrayAdapter
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_placeorder.*
 
@@ -64,10 +64,12 @@ class PlaceOrderActivity: AppCompatActivity() {
 
         placeOrder.setOnClickListener{
             //            val recipient = "alinamocanu2@gmail.com".trim()
-////            val subject = "Comanda dumneavoastra!".trim()
-////            val message = "Comanda a fost plasata !".trim()
-////            sendEmail(recipient, subject, message)
+//            val subject = "Comanda dumneavoastra!".trim()
+//           val message = "Comanda a fost plasata !".trim()
+//           sendEmail(recipient, subject, message)
             saveOrder()
+            val intent = Intent(this@PlaceOrderActivity, OrderConfirmationActivity::class.java)
+            startActivity(intent)
         }
     }
 
