@@ -36,6 +36,9 @@
 
         <activity android:name=".ProfileActivity" android:windowSoftInputMode="adjustResize">
         </activity>
+
+        <activity android:name=".OrderConfirmationActivity" android:windowSoftInputMode="adjustResize">
+        </activity>
         <activity
             android:name=".CartActivity"
             android:windowSoftInputMode="adjustResize" />
