@@ -185,7 +185,6 @@ class ProfileActivity:AppCompatActivity() {
             feedbackText.visibility = View.INVISIBLE
             feedbackHeadText.visibility = View.INVISIBLE
             feedbackButton.visibility = View.VISIBLE
-
         }
     }
 }
