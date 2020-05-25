@@ -6,38 +6,64 @@ import android.text.InputFilter.LengthFilter
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.load.engine.bitmap_recycle.IntegerArrayAdapter
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_placeorder.*
-import kotlin.math.max
 
 
 class PlaceOrderActivity: AppCompatActivity() {
     lateinit var card: RadioButton
     lateinit var placeOrder: Button
-
     lateinit var idfullname: EditText
     lateinit var idphonenumber: EditText
     lateinit var idaddress: EditText
     lateinit var idradiogroup: RadioGroup
-    var maxid = 0;
+    lateinit var idmessage: EditText
+    lateinit var datePicker: DatePicker
+    lateinit var showCost :TextView
+    lateinit var showComanda:TextView
+    var comanda :String = ""
+    var totalCost :Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        var itemList: ArrayList<Item> = ArrayList()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_placeorder)
 
-        card = findViewById(R.id.idCard)
+        card = findViewById(R.id.Card)
         placeOrder = findViewById(R.id.idPlaceOrder)
 
         idfullname = findViewById(R.id.idFullName)
         idphonenumber = findViewById(R.id.idPhoneNumber)
         idaddress = findViewById(R.id.idAddress)
         idradiogroup = findViewById(R.id.radioGroup)
+        idmessage = findViewById(R.id.idMessage)
+        datePicker= findViewById(R.id.idDatePicker)
+        if (intent != null) {
+            itemList = intent.getSerializableExtra("itemList") as ArrayList<Item>
+
+        }
+        for (item in itemList) {
+            totalCost += item.totalPrice!!.toInt()
+            comanda +=item.name + " " + item.amount + "\n"
+        }
 
         card.setOnClickListener {
             cardDetails()
         }
 
+        showCost = findViewById(R.id.cost)
+        showCost.setText("Total price :" + totalCost)
+
+        showComanda = findViewById(R.id.comanda)
+        showComanda.setText(comanda)
+
+        val param = showComanda.layoutParams as LinearLayout.LayoutParams
+        param.height = itemList.size*90
+
+
         placeOrder.setOnClickListener{
-//            val recipient = "alinamocanu2@gmail.com".trim()
+            //            val recipient = "alinamocanu2@gmail.com".trim()
 ////            val subject = "Comanda dumneavoastra!".trim()
 ////            val message = "Comanda a fost plasata !".trim()
 ////            sendEmail(recipient, subject, message)
@@ -67,18 +93,44 @@ class PlaceOrderActivity: AppCompatActivity() {
         val phonenumber = idphonenumber.text.toString().trim();
         val payment = idradiogroup.checkedRadioButtonId
         val paymentmethod = resources.getResourceEntryName(payment)
+        val price = showCost.text.toString().trim()
+        val comanda = showComanda.text.toString().trim()
 
+        val message = idmessage.text.toString().trim()
 
+        val day = datePicker.dayOfMonth
+        val month = datePicker.month + 1
+        val year = datePicker.year
+        var date = day.toString()+ "/" + month.toString() + "/" + year.toString()
+        date = date.trim()
         val ref = FirebaseDatabase.getInstance().getReference("orders")
 
+        if(fullname.length != 0) {
+            if(address.length != 0){
+                if(phonenumber.length != 0 && phonenumber.contains("07")){
+                    val orderId = ref.push().key
 
-        val orderId = ref.push().key
+                    val order = Order
+                    order.id = orderId.toString()
+                    order.fullname = fullname
+                    order.address = address
+                    order.phonenumber = phonenumber
+                    order.payment = paymentmethod
+                    order.message = message
+                    order.date = date
+                    order.price = price
+                    order.command = comanda
 
-        val order = Order(orderId.toString(), fullname, address, phonenumber,paymentmethod)
 
-        ref.child(orderId.toString()).setValue(order).addOnCompleteListener(){
-            Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
+                    ref.child(orderId.toString()).setValue(order).addOnCompleteListener() {
+                        Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
+                    }
+                }
+                else Toast.makeText(applicationContext, "Not a valid phone number", Toast.LENGTH_LONG).show()
+            }
+            else Toast.makeText(applicationContext, "Not a valid address", Toast.LENGTH_LONG).show()
         }
+        else Toast.makeText(applicationContext, "Name must not be null", Toast.LENGTH_LONG).show()
     }
 
     private fun cardDetails() {
