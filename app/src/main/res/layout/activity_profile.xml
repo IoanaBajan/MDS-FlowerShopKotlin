@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -44,21 +45,6 @@
     </ImageButton>
 
     <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginLeft="105dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/home_icon"
-        android:id="@+id/homeButton">
-
-    </ImageButton>
-
-    <ImageButton
         android:layout_width="110dp"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"
@@ -68,6 +54,21 @@
         android:layout_marginRight="-2dp"
         android:background="@color/colorAccent"
         android:src="@drawable/buton1">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/home_icon">
+
     </ImageButton>
 
     <TextView
@@ -116,6 +117,68 @@
         android:text="Reset password"
         android:textColor="#141315"
         android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/feedbackText"
+        android:layout_width="377dp"
+        android:layout_height="198dp"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="107dp"
+        android:background="@color/colorText"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/sendFeedbackButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="185dp"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="343dp"
+        android:background="@color/colorAccent"
+        android:text="@string/send_feedback"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/feedbackButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorAccent"
+        android:text="@string/feedback"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/feedbackHeadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="71dp"
+        android:text="@string/feedbackHead"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

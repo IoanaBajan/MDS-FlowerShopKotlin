@@ -2,9 +2,11 @@ package com.example.test
 
 import android.content.Intent
 import android.graphics.Color
+import android.opengl.Visibility
 import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputType
+import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_placeorder.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_profile.view.*
+import org.w3c.dom.Text
 
 class ProfileActivity:AppCompatActivity() {
 
@@ -143,6 +146,45 @@ class ProfileActivity:AppCompatActivity() {
                 })
 
             }
+
+        }
+
+        val feedbackButton : Button = findViewById(R.id.feedbackButton)
+        val send : Button = findViewById(R.id.sendFeedbackButton)
+        val feedbackText : EditText = findViewById(R.id.feedbackText)
+        val textHead : TextView = findViewById(R.id.feedbackHeadText)
+        feedbackText.visibility = View.INVISIBLE
+        feedbackHeadText.visibility = View.INVISIBLE
+
+        feedbackButton.setOnClickListener {
+
+            feedbackButton.visibility = View.INVISIBLE
+            feedbackText.visibility = View.VISIBLE
+            feedbackHeadText.visibility = View.VISIBLE
+            send.visibility = View.VISIBLE
+
+        }
+
+        send.setOnClickListener {
+            var text = ""
+            text = feedbackText.text.toString().trim()
+
+            val ref = FirebaseDatabase.getInstance().getReference("feedbacks")
+
+            if(text.equals("")){
+                Toast.makeText(applicationContext, "Feedback null", Toast.LENGTH_LONG).show()
+            } else {
+                val feedbackId = ref.push().key
+                ref.child(feedbackId.toString()).setValue(text)
+                Toast.makeText(applicationContext, "Your feedback has been recorded!", Toast.LENGTH_LONG).show()
+            }
+
+            send.visibility = View.INVISIBLE
+            text = ""
+            feedbackText.text = null
+            feedbackText.visibility = View.INVISIBLE
+            feedbackHeadText.visibility = View.INVISIBLE
+            feedbackButton.visibility = View.VISIBLE
 
         }
     }

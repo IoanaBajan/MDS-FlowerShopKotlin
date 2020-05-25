@@ -36,5 +36,10 @@
     <string name="wrap4">dark white wrap</string>
     <string name="wrap6">gold wrap</string>
     <string name="wrap5">pink wrap</string>
+    <string name="photo_bouquet_created"> Created bouquet</string>
+    <string name="feedback"> Leave feedback</string>
+    <string name="send_feedback"> Send feedback</string>
+    <string name="thank_feedback"> Thank you for you feedback! </string>
+    <string name="feedbackHead"> Write your feedback down below:</string>
 
 </resources>
