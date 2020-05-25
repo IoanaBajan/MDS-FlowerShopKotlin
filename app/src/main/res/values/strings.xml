@@ -42,5 +42,6 @@
     <string name="send_feedback"> Send feedback</string>
     <string name="thank_feedback"> Thank you for you feedback! </string>
     <string name="feedbackHead"> Write your feedback down below:</string>
+    <string name="Reset_password"> Reset password</string>
 
 </resources>

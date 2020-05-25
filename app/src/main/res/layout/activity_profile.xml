@@ -114,9 +114,9 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="300dp"
         android:background="@color/colorAccent"
-        android:text="Reset password"
+        android:text="@string/Reset_password"
         android:textColor="#141315"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/feedbackText"

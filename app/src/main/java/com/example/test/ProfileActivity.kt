@@ -18,6 +18,7 @@ import org.w3c.dom.Text
 
 class ProfileActivity:AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -42,6 +43,11 @@ class ProfileActivity:AppCompatActivity() {
 
         val reset: Button = findViewById(R.id.reset)
         reset.setOnClickListener{
+            reset.visibility = View.INVISIBLE
+            feedbackButton.visibility = View.INVISIBLE
+            feedbackHeadText.visibility = View.INVISIBLE
+            feedbackText.visibility = View.INVISIBLE
+            sendFeedbackButton.visibility = View.INVISIBLE
 
             val username = EditText(this)
             username.layoutParams = RelativeLayout.LayoutParams(
@@ -113,6 +119,15 @@ class ProfileActivity:AppCompatActivity() {
 
 
             ok.setOnClickListener{
+                feedbackButton.visibility = View.VISIBLE
+                reset.visibility = View.VISIBLE
+                ok.visibility = View.INVISIBLE
+                confirmpass.visibility = View.INVISIBLE
+                newpass.visibility = View.INVISIBLE
+                oldpass.visibility = View.INVISIBLE
+                username.visibility = View.INVISIBLE
+
+
                 val databaseReference = FirebaseDatabase.getInstance().getReference("clients")
 
                 val query: Query = databaseReference.orderByChild("username").equalTo(username.getText().toString().trim())
