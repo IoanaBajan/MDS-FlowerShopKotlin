@@ -1034,31 +1034,47 @@
 
             <Button
                 android:id="@+id/buttonPlaceOrder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textBouquet"
+                android:layout_width="135dp"
+                android:layout_height="55dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="86dp"
-                android:layout_marginEnd="43dp"
-                android:layout_marginRight="43dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginBottom="0dp"
                 android:text="@string/Order"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <Button
                 android:id="@+id/buttonConfigureAgain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textBouquet"
+                android:layout_width="135dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/bouquetImage"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="85dp"
-                android:layout_marginEnd="157dp"
-                android:layout_marginRight="157dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="173dp"
+                android:layout_marginRight="173dp"
+                android:layout_marginBottom="0dp"
                 android:text="@string/Configure"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/bouquetImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textBouquet"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="7dp"
+                android:contentDescription="@string/photo_bouquet_created"
+                tools:visibility="invisible" />
 
         </RelativeLayout>
     </ScrollView>
