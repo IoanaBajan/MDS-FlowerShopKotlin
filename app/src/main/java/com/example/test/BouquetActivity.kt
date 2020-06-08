@@ -1,18 +1,18 @@
 package com.example.test
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_createbouquet.*
 
 
 class BouquetActivity:AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.Q)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,17 +31,47 @@ class BouquetActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_createbouquet)
 
-      
+        val btnProfile: ImageButton = findViewById(R.id.imageButton3)
+        btnProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnHome: ImageButton = findViewById(R.id.ButtonHome)
         btnHome.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+        fun appear(b: ImageButton, f: Array<ImageButton>): Boolean {
+            for(i in f.indices) {
+                if(b.id == f[i].id){
+                    return true
+                }
+            }
+            return false
+        }
+        fun searchFlowers(f: Array<ImageButton>): Boolean {
+            val flowers = arrayOf(buttonRoses, buttonGermini, buttonPeonies, buttonLilies, buttonFreesia, buttonBouvardia,
+                buttonCarnations, buttonHyancnths, buttonAnthurium, buttonAgapanthus, buttonTullips, buttonLiliac)
+
+            for(i in flowers.indices) {
+                if(appear(flowers[i], f) and !flowers[i].isSelected){
+                    return false
+                }
+                if(!appear(flowers[i], f) and flowers[i].isSelected){
+                    return false
+                }
+
+            }
+            return true
+        }
         val buttonSubmit : Button = findViewById(R.id.buttonSubmit)
         buttonSubmit.setOnClickListener {
             buttonSubmit.visibility = View.INVISIBLE
             buttonSubmit.isSelected = true
+
+            val buttonReconfigure : Button = findViewById(R.id.buttonConfigureAgain)
+            buttonReconfigure.text = "Configure again"
 
             val textBouquet : TextView = findViewById(R.id.textBouquet)
             var text = "Your bouquet consists of: \n"
@@ -72,6 +102,60 @@ class BouquetActivity:AppCompatActivity() {
             }
             text = text.plus("\n").plus("Total cost: ").plus(totalCost).plus(" de lei\n")
             textBouquet.text = text
+
+            val bouquetImage : ImageView = findViewById(R.id.bouquetImage)
+            bouquetImage.visibility = View.VISIBLE
+
+            when {
+                searchFlowers(arrayOf(buttonRoses, buttonTullips)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_and_tullips)
+                }
+                searchFlowers(arrayOf(buttonRoses, buttonTullips, buttonPeonies)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_tullips_peonies)
+                }
+                searchFlowers(arrayOf(buttonRoses, buttonAgapanthus)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_agapanthus)
+                }
+                searchFlowers(arrayOf(buttonTullips, buttonHyancnths)) -> {
+                    bouquetImage.setImageResource(R.drawable.tullips_hyancinths)
+                }
+                searchFlowers(arrayOf(buttonRoses, buttonLilies)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_lilies)
+                }
+                searchFlowers(arrayOf(buttonRoses, buttonLilies, buttonFreesia)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_lilies_freesia)
+                }
+                searchFlowers(arrayOf(buttonLilies, buttonFreesia)) -> {
+                    bouquetImage.setImageResource(R.drawable.lilies_freesia)
+                }
+                searchFlowers(arrayOf(buttonCarnations)) -> {
+                    bouquetImage.setImageResource(R.drawable.carnations_)
+                }
+                searchFlowers(arrayOf(buttonLiliac, buttonHyancnths)) -> {
+                    bouquetImage.setImageResource(R.drawable.liliac_hyancinths)
+                }
+                searchFlowers(arrayOf(buttonPeonies, buttonBouvardia)) -> {
+                    bouquetImage.setImageResource(R.drawable.peonies_bouvardia)
+                }
+                searchFlowers(arrayOf(buttonRoses, buttonAgapanthus)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_agapanthus)
+                }
+                searchFlowers(arrayOf(buttonRoses, buttonLilies, buttonGermini)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_lilies_germini)
+                }
+                searchFlowers(arrayOf(buttonPeonies)) -> {
+                    bouquetImage.setImageResource(R.drawable.peonies_)
+                }
+                searchFlowers(arrayOf(buttonLilies)) -> {
+                    bouquetImage.setImageResource(R.drawable.lilies_)
+                }
+                searchFlowers(arrayOf(buttonRoses)) -> {
+                    bouquetImage.setImageResource(R.drawable.roses_)
+                }
+                else -> {
+                    bouquetImage.setImageResource(R.drawable.inexistent_bouquet)
+                }
+            }
 
         }
             val buttonRoses: ImageButton = findViewById(R.id.buttonRoses)
@@ -493,16 +577,19 @@ class BouquetActivity:AppCompatActivity() {
 
         val buttonReconfigure : Button = findViewById(R.id.buttonConfigureAgain)
         buttonReconfigure.setOnClickListener {
+
             buttonSubmit.visibility = View.VISIBLE
             buttonSubmit.isSelected = false
 
-            val textBouquet : TextView = findViewById(R.id.textBouquet)
+            val textBouquet: TextView = findViewById(R.id.textBouquet)
             textBouquet.text = null
+
+            val bouquetCreated: ImageView = findViewById(R.id.bouquetImage)
+            bouquetCreated.visibility = View.INVISIBLE
+            bouquetCreated.setImageResource(R.drawable.none_image)
+
+            buttonReconfigure.text = "Press to go up"
+            scrollView2.fullScroll(ScrollView.FOCUS_UP)
         }
-
-
-
     }
-
-
 }
