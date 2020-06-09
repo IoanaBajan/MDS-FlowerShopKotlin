@@ -154,7 +154,7 @@
                 android:id="@+id/buttonAgapanthus"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="20dp"
@@ -202,7 +202,7 @@
                 android:id="@+id/buttonTullips"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="653dp"
@@ -218,7 +218,7 @@
                 android:id="@+id/buttonLiliac"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="651dp"
@@ -330,7 +330,7 @@
                 android:id="@+id/buttonCarnations"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="20dp"
@@ -346,7 +346,7 @@
                 android:id="@+id/buttonHyancnths"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="453dp"
@@ -362,7 +362,7 @@
                 android:id="@+id/buttonAnthurium"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="453dp"
@@ -426,7 +426,7 @@
                 android:id="@+id/buttonFreesia"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="272dp"
@@ -442,7 +442,7 @@
                 android:id="@+id/buttonBouvardia"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="272dp"
@@ -458,7 +458,7 @@
                 android:id="@+id/buttonLilies"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="20dp"
@@ -506,7 +506,7 @@
                 android:id="@+id/buttonPeonies"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="90dp"
@@ -522,7 +522,7 @@
                 android:id="@+id/buttonGermini"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="92dp"
@@ -536,13 +536,13 @@
 
             <ImageButton
                 android:id="@+id/ButtonHome"
-                android:layout_width="110dp"
+                android:layout_width="180dp"
                 android:layout_height="47dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="-10dp"
-                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="-10dp"
                 android:layout_marginRight="0dp"
@@ -550,57 +550,22 @@
                 android:background="@drawable/background_button"
                 android:src="@drawable/home_icon" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="105dp"
-                android:layout_height="47dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="-10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_toEndOf="@+id/ButtonHome"
-                android:layout_toRightOf="@+id/ButtonHome"
-                android:contentDescription="@string/imageButton2"
-                android:background="@drawable/background_button"
-                android:src="@drawable/buton4">
-
-            </ImageButton>
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="115dp"
+                android:layout_width="188dp"
                 android:layout_height="47dp"
+                android:layout_alignStart="@+id/homeButton"
+                android:layout_alignLeft="@+id/homeButton"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="-15dp"
-                android:layout_marginLeft="0dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginLeft="190dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
+                android:background="@drawable/background_button"
                 android:contentDescription="@string/imageButton3"
-                android:layout_toEndOf="@+id/imageButton2"
-                android:layout_toRightOf="@+id/imageButton2"
-                android:background="@drawable/background_button"
                 android:src="@drawable/user">
-
-            </ImageButton>
-
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="147dp"
-                android:layout_height="47dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="-15dp"
-                android:layout_marginLeft="-10dp"
-                android:layout_marginTop="0dp"
-                android:contentDescription = "@string/imageButton4"
-                android:layout_toEndOf="@+id/imageButton3"
-                android:layout_toRightOf="@+id/imageButton3"
-                android:background="@drawable/background_button"
-                android:src="@drawable/buton1">
-
 
             </ImageButton>
 
@@ -611,7 +576,7 @@
                 android:layout_below="@+id/ButtonHome"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimary"
@@ -621,7 +586,7 @@
                 android:id="@+id/buttonRoses"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/homeButton"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="20dp"
@@ -642,7 +607,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="19dp"
                 android:layout_marginLeft="19dp"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="95dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -657,7 +622,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="256dp"
                 android:layout_marginLeft="256dp"
-                android:layout_marginTop="690dp"
+                android:layout_marginTop="645dp"
                 android:alpha="1"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
@@ -672,7 +637,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="133dp"
                 android:layout_marginLeft="133dp"
-                android:layout_marginTop="693dp"
+                android:layout_marginTop="645dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -686,7 +651,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="14dp"
                 android:layout_marginLeft="14dp"
-                android:layout_marginTop="691dp"
+                android:layout_marginTop="645dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -773,7 +738,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="143dp"
                 android:layout_marginLeft="143dp"
-                android:layout_marginTop="135dp"
+                android:layout_marginTop="95dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -787,7 +752,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="265dp"
                 android:layout_marginLeft="265dp"
-                android:layout_marginTop="141dp"
+                android:layout_marginTop="95dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -801,7 +766,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="21dp"
                 android:layout_marginLeft="21dp"
-                android:layout_marginTop="493dp"
+                android:layout_marginTop="453dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -815,7 +780,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="132dp"
                 android:layout_marginLeft="132dp"
-                android:layout_marginTop="491dp"
+                android:layout_marginTop="453dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -829,7 +794,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="258dp"
                 android:layout_marginLeft="258dp"
-                android:layout_marginTop="313dp"
+                android:layout_marginTop="280dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -843,7 +808,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="140dp"
                 android:layout_marginLeft="140dp"
-                android:layout_marginTop="312dp"
+                android:layout_marginTop="280dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -857,7 +822,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="19dp"
                 android:layout_marginLeft="19dp"
-                android:layout_marginTop="314dp"
+                android:layout_marginTop="280dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -871,7 +836,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="255dp"
                 android:layout_marginLeft="255dp"
-                android:layout_marginTop="493dp"
+                android:layout_marginTop="453dp"
                 android:background="@drawable/cancel"
                 android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -885,7 +850,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="52dp"
                 android:layout_marginLeft="52dp"
-                android:layout_marginTop="286dp"
+                android:layout_marginTop="230dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -898,7 +863,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="291dp"
                 android:layout_marginLeft="291dp"
-                android:layout_marginTop="464dp"
+                android:layout_marginTop="410dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -911,7 +876,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="176dp"
                 android:layout_marginLeft="176dp"
-                android:layout_marginTop="285dp"
+                android:layout_marginTop="230dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -924,7 +889,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="49dp"
                 android:layout_marginLeft="49dp"
-                android:layout_marginTop="650dp"
+                android:layout_marginTop="600dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -937,7 +902,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="53dp"
                 android:layout_marginLeft="53dp"
-                android:layout_marginTop="849dp"
+                android:layout_marginTop="819dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -950,7 +915,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="189dp"
                 android:layout_marginLeft="189dp"
-                android:layout_marginTop="852dp"
+                android:layout_marginTop="819dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -963,7 +928,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="297dp"
                 android:layout_marginLeft="297dp"
-                android:layout_marginTop="852dp"
+                android:layout_marginTop="819dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -976,7 +941,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="182dp"
                 android:layout_marginLeft="182dp"
-                android:layout_marginTop="652dp"
+                android:layout_marginTop="600dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -989,7 +954,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="296dp"
                 android:layout_marginLeft="296dp"
-                android:layout_marginTop="655dp"
+                android:layout_marginTop="600dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -1002,7 +967,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="176dp"
                 android:layout_marginLeft="176dp"
-                android:layout_marginTop="464dp"
+                android:layout_marginTop="410dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -1015,7 +980,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="53dp"
                 android:layout_marginLeft="53dp"
-                android:layout_marginTop="463dp"
+                android:layout_marginTop="410dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
@@ -1028,7 +993,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="296dp"
                 android:layout_marginLeft="296dp"
-                android:layout_marginTop="286dp"
+                android:layout_marginTop="230dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
