@@ -24,6 +24,7 @@ class PlaceOrderActivity: AppCompatActivity() {
     lateinit var showComanda:TextView
     var comanda :String = ""
     var totalCost :Int = 0
+    var ok:Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         var itemList: ArrayList<Item> = ArrayList()
@@ -53,7 +54,7 @@ class PlaceOrderActivity: AppCompatActivity() {
         }
 
         showCost = findViewById(R.id.cost)
-        showCost.setText("Total price :" + totalCost)
+        showCost.setText("Total price :" + totalCost+ "lei")
 
         showComanda = findViewById(R.id.comanda)
         showComanda.setText(comanda)
@@ -136,7 +137,8 @@ class PlaceOrderActivity: AppCompatActivity() {
     }
 
     private fun cardDetails() {
-        if (card.isChecked) {
+        if (card.isChecked && !ok) {
+            ok = true
             val nrCard = EditText(this)
             nrCard.layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,

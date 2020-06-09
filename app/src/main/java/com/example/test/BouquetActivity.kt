@@ -14,8 +14,12 @@ import kotlinx.android.synthetic.main.activity_createbouquet.*
 class BouquetActivity:AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.Q)
+    var itemList: ArrayList<Item> = ArrayList()
+    var totalCost = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         // urmatoarele 12 variabile vor contoriza cate flori de tipul respectiv au fost selectate(initial toate 0)
         var nrRoses = 0
         var nrGermini = 0
@@ -43,6 +47,21 @@ class BouquetActivity:AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+        val btnPlaceOrder : Button = findViewById(R.id.buttonPlaceOrder)
+        btnPlaceOrder.setOnClickListener {
+            val intent  = Intent(this@BouquetActivity, PlaceOrderActivity::class.java)
+            val flowers = arrayOf(buttonRoses, buttonGermini, buttonPeonies, buttonLilies, buttonFreesia, buttonBouvardia,
+                buttonCarnations, buttonHyancnths, buttonAnthurium, buttonAgapanthus, buttonTullips, buttonLiliac)
+            for (i in flowers.indices){
+                if (flowers[i].isSelected){
+                    val i: Item = Item(flowers[i].contentDescription.split(' ', '(')[0],totalCost.toString(),null,1,totalCost)
+                    itemList.add(i)
+                }
+            }
+            intent.putExtra("itemList", itemList)
+            startActivity(intent)
+
+        }
         fun appear(b: ImageButton, f: Array<ImageButton>): Boolean {
             // functia verifica daca un anume buton apare intr-o lista de butoane, returneaza true in caz afirmativ, false in caz contrar
             for(i in f.indices) {
@@ -56,7 +75,6 @@ class BouquetActivity:AppCompatActivity() {
             //verifica daca butoanele din lista 'f' de butoane, care sunt butoane din cele 12 butoane cu flori, sunt toate selectate
             val flowers = arrayOf(buttonRoses, buttonGermini, buttonPeonies, buttonLilies, buttonFreesia, buttonBouvardia,
                 buttonCarnations, buttonHyancnths, buttonAnthurium, buttonAgapanthus, buttonTullips, buttonLiliac)
-
             for(i in flowers.indices) { //pentru fiecare buton din 'flowers', verific daca acesta apare in 'f'
                 if(appear(flowers[i], f) and !flowers[i].isSelected){ /// daca apare si nu este selectat, return false
                     return false
@@ -83,7 +101,6 @@ class BouquetActivity:AppCompatActivity() {
                                   buttonCarnations, buttonHyancnths, buttonAnthurium, buttonAgapanthus, buttonTullips, buttonLiliac)
             val nrFlowers = arrayOf(nrRoses, nrGermini, nrPeonies, nrLilies, nrFreesia, nrBouvardia, nrCarnations, nrHyancnths,
                                     nrAnthurium, nrAgapanthus, nrTullips, nrLiliac)
-            var totalCost = 0
             for(i in flowers.indices) {
                 if(flowers[i].isSelected) {
                     text = text.plus(flowers[i].contentDescription.split(' ', '(')[0]).plus(": ").plus(nrFlowers[i]).plus('\n')
