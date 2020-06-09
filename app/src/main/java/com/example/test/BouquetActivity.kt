@@ -695,6 +695,8 @@ class BouquetActivity:AppCompatActivity() {
 
         val buttonReconfigure : Button = findViewById(R.id.buttonConfigureAgain) // buton de reconfigurare a buchetului
         buttonReconfigure.setOnClickListener {
+            itemList.clear()
+            totalCost = 0
             // se reseteaza butonul de submit
             buttonSubmit.visibility = View.VISIBLE
             buttonSubmit.isSelected = false

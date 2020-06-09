@@ -553,7 +553,7 @@
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="188dp"
+                android:layout_width="200dp"
                 android:layout_height="47dp"
                 android:layout_alignStart="@+id/homeButton"
                 android:layout_alignLeft="@+id/homeButton"
