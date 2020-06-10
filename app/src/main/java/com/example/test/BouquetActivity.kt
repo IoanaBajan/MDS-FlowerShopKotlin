@@ -52,9 +52,11 @@ class BouquetActivity:AppCompatActivity() {
             val intent  = Intent(this@BouquetActivity, PlaceOrderActivity::class.java)
             val flowers = arrayOf(buttonRoses, buttonGermini, buttonPeonies, buttonLilies, buttonFreesia, buttonBouvardia,
                 buttonCarnations, buttonHyancnths, buttonAnthurium, buttonAgapanthus, buttonTullips, buttonLiliac)
+            val nrFlowers = arrayOf(nrRoses, nrGermini, nrPeonies, nrLilies, nrFreesia, nrBouvardia, nrCarnations, nrHyancnths,
+                nrAnthurium, nrAgapanthus, nrTullips, nrLiliac)
             for (i in flowers.indices){
                 if (flowers[i].isSelected){
-                    val i: Item = Item(flowers[i].contentDescription.split(' ', '(')[0],totalCost.toString(),null,1,totalCost)
+                    val i: Item = Item(flowers[i].contentDescription.split(' ', '(')[0], flowers[i].contentDescription.split(' ', '(')[2],null, nrFlowers[i], totalCost)
                     itemList.add(i)
                 }
             }
@@ -134,7 +136,7 @@ class BouquetActivity:AppCompatActivity() {
             if(!selected){
                 text = text.plus("None")
             }
-            text = text.plus("\n").plus("Total cost: ").plus(totalCost).plus(" de lei\n")
+            text = text.plus("\n").plus("Total cost: ").plus(totalCost).plus(" (de) lei\n")
             textBouquet.text = text
 
             val bouquetImage : ImageView = findViewById(R.id.bouquetImage)
