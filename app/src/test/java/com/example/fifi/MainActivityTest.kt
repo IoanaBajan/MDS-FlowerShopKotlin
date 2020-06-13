@@ -1,11 +1,13 @@
-package com.example.test
+package com.example.fifi
 
+import com.example.fifi.model.Client
 import org.junit.Test
 
 import org.junit.Assert.*
 
 class MainActivityTest {
-    var client : Client = Client("0", "", "", "nume", "parola", "email")
+    var client : Client =
+        Client("0", "", "", "nume", "parola", "email")
 
     @Test
     fun getUsername() {

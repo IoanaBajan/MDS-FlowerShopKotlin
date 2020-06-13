@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.fifi.model.Client
+import com.example.fifi.R
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var idUsernameR: EditText
@@ -50,7 +51,14 @@ class SignUpActivity : AppCompatActivity() {
                 if(mail.contains("@")) {
                     val clientId = ref.push().key
 
-                    val client = Client(clientId.toString(), firstName, lastName, username, password, mail)
+                    val client = Client(
+                        clientId.toString(),
+                        firstName,
+                        lastName,
+                        username,
+                        password,
+                        mail
+                    )
 
                     ref.child(clientId.toString()).setValue(client).addOnCompleteListener() {
                         Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()

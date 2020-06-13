@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fifi.*
+import com.example.fifi.model.Item
 import kotlinx.android.synthetic.main.activity_createbouquet.*
 
 
@@ -56,7 +58,17 @@ class BouquetActivity:AppCompatActivity() {
                 nrAnthurium, nrAgapanthus, nrTullips, nrLiliac)
             for (i in flowers.indices){
                 if (flowers[i].isSelected){
-                    val i: Item = Item(flowers[i].contentDescription.split(' ', '(')[0], flowers[i].contentDescription.split(' ', '(')[2],null, nrFlowers[i], nrFlowers[i] * flowers[i].contentDescription.split(' ', '(')[2].toInt())
+                    val i: Item =
+                        Item(
+                            flowers[i].contentDescription.split(
+                                ' ',
+                                '('
+                            )[0],
+                            flowers[i].contentDescription.split(' ', '(')[2],
+                            null,
+                            nrFlowers[i],
+                            nrFlowers[i] * flowers[i].contentDescription.split(' ', '(')[2].toInt()
+                        )
                     itemList.add(i)
                 }
             }

@@ -1,20 +1,17 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.content.Intent
 import android.graphics.Color
-import android.opengl.Visibility
 import android.os.Bundle
-import android.text.InputFilter
 import android.text.InputType
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fifi.model.Client
+import com.example.fifi.R
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_placeorder.*
 import kotlinx.android.synthetic.main.activity_profile.*
-import kotlinx.android.synthetic.main.activity_profile.view.*
-import org.w3c.dom.Text
 
 class ProfileActivity:AppCompatActivity() {
 
@@ -136,11 +133,20 @@ class ProfileActivity:AppCompatActivity() {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
                             for (client in dataSnapshot.children) {
-                                val usersBean: Client = client.getValue<Client>(Client::class.java) ?: throw IllegalArgumentException("Name required")
+                                val usersBean: Client = client.getValue<Client>(
+                                    Client::class.java) ?: throw IllegalArgumentException("Name required")
                                 if (usersBean.password.equals(oldpass.getText().toString().trim())) {
                                     if(newpass.getText().toString().equals(confirmpass.getText().toString())){
                                             var newpass1 = newpass.getText().toString().trim()
-                                            val cli = Client(usersBean.id, usersBean.firstName, usersBean.lastName, usersBean.username, newpass1, usersBean.email)
+                                            val cli =
+                                                Client(
+                                                    usersBean.id,
+                                                    usersBean.firstName,
+                                                    usersBean.lastName,
+                                                    usersBean.username,
+                                                    newpass1,
+                                                    usersBean.email
+                                                )
                                             databaseReference.child(usersBean.id).setValue(cli)
                                         Toast.makeText(applicationContext, "Password changed !", Toast.LENGTH_LONG).show()
                                     }

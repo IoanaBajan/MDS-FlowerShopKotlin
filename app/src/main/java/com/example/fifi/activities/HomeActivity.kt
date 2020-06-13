@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.content.Intent
 import android.graphics.Color
@@ -9,10 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewManager
 import android.widget.*
-import com.example.test.R.id.cart
+import com.example.fifi.model.Bouquet
+import com.example.fifi.model.Item
+import com.example.fifi.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -24,8 +25,18 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        var  myImageList = intArrayOf(R.drawable.f1, R.drawable.f10,R.drawable.f11, R.drawable.f12,
-            R.drawable.f13,R.drawable.f14,R.drawable.f15,R.drawable.f16,R.drawable.f17,R.drawable.f18)
+        var  myImageList = intArrayOf(
+            R.drawable.f1,
+            R.drawable.f10,
+            R.drawable.f11,
+            R.drawable.f12,
+            R.drawable.f13,
+            R.drawable.f14,
+            R.drawable.f15,
+            R.drawable.f16,
+            R.drawable.f17,
+            R.drawable.f18
+        )
         v_flipper = findViewById(R.id.v_flipper)
         for (img in myImageList) {
             flipperImages(img)
@@ -75,7 +86,7 @@ class HomeActivity : AppCompatActivity() {
         val idbutton17: Button = findViewById(R.id.button17)
         val idbutton18: Button = findViewById(R.id.button18)
         idbutton1.setOnClickListener {
-            var i = Item("Scented Lavender","230","f1")
+            var i = Item("Scented Lavender", "230", "f1")
             if(products.find{it.name == "Scented Lavender"} == null)
                 products.add(i)
             else{
@@ -87,7 +98,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton2.setOnClickListener {
-            var i = Item("Simply Pink","150","f1")
+            var i = Item("Simply Pink", "150", "f1")
             if(products.find{it.name == "Simply Pink"} == null)
                 products.add(i)
             else{
@@ -99,7 +110,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton3.setOnClickListener {
-            var i = Item("Rose bud","140","f1")
+            var i = Item("Rose bud", "140", "f1")
             if(products.find{it.name == "Rose bud"} == null)
                 products.add(i)
             else{
@@ -111,7 +122,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton4.setOnClickListener {
-            var i = Item("Peonies","250","f1")
+            var i = Item("Peonies", "250", "f1")
             if(products.find{it.name == "Peonies"} == null)
                 products.add(i)
             else{
@@ -123,7 +134,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton5.setOnClickListener {
-            var i = Item("Romantic","300","f1")
+            var i = Item("Romantic", "300", "f1")
             if(products.find{it.name == "Romantic"} == null)
                 products.add(i)
             else{
@@ -135,7 +146,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton6.setOnClickListener {
-            var i = Item("Blue Bell","160","f1")
+            var i = Item("Blue Bell", "160", "f1")
             if(products.find{it.name == "Blue Bell"} == null)
                 products.add(i)
             else{
@@ -147,7 +158,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton7.setOnClickListener {
-            var i = Item("Blues","250","f1")
+            var i = Item("Blues", "250", "f1")
             if(products.find{it.name == "Blues"} == null)
                 products.add(i)
             else{
@@ -159,7 +170,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton8.setOnClickListener {
-            var i = Item("Casa Blanca","125","f1")
+            var i = Item("Casa Blanca", "125", "f1")
             if(products.find{it.name == "Casa Blanca"} == null)
                 products.add(i)
             else{
@@ -171,7 +182,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton9.setOnClickListener {
-            var i = Item("Citrus","200","f1")
+            var i = Item("Citrus", "200", "f1")
             if(products.find{it.name == "Citrus"} == null)
                 products.add(i)
             else{
@@ -183,7 +194,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton10.setOnClickListener {
-            var i = Item("Glaze","150","f1")
+            var i = Item("Glaze", "150", "f1")
             if(products.find{it.name == "Glaze"} == null)
                 products.add(i)
             else{
@@ -195,7 +206,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton11.setOnClickListener {
-            var i = Item("Godess","250","f1")
+            var i = Item("Godess", "250", "f1")
             if(products.find{it.name == "Godess"} == null)
                 products.add(i)
             else{
@@ -207,7 +218,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton12.setOnClickListener {
-            var i = Item("Purity","130","f1")
+            var i = Item("Purity", "130", "f1")
             if(products.find{it.name == "Purity"} == null)
                 products.add(i)
             else{
@@ -219,7 +230,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton13.setOnClickListener {
-            var i = Item("Snapdragons","150","f1")
+            var i = Item("Snapdragons", "150", "f1")
             if(products.find{it.name == "Snapdragons"} == null)
                 products.add(i)
             else{
@@ -231,7 +242,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton14.setOnClickListener {
-            var i = Item("Scented Spring","170","f1")
+            var i = Item("Scented Spring", "170", "f1")
             if(products.find{it.name == "Scented Spring"} == null)
                 products.add(i)
             else{
@@ -243,7 +254,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton15.setOnClickListener {
-            var i = Item("Secret Garden","230","f1")
+            var i = Item("Secret Garden", "230", "f1")
             if(products.find{it.name == "Secret Garden"} == null)
                 products.add(i)
             else{
@@ -255,7 +266,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton16.setOnClickListener {
-            var i = Item("Star Gazer","200","f1")
+            var i = Item("Star Gazer", "200", "f1")
             if(products.find{it.name == "Star Gazer"} == null)
                 products.add(i)
             else{
@@ -267,7 +278,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton17.setOnClickListener {
-            var i = Item("Topaz","200","f1")
+            var i = Item("Topaz", "200", "f1")
             if(products.find{it.name == "Topaz"} == null)
                 products.add(i)
             else{
@@ -279,7 +290,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton18.setOnClickListener {
-            var i = Item("Tulips","110","f1")
+            var i = Item("Tulips", "110", "f1")
             if(products.find{it.name == "Tulips"} == null)
                 products.add(i)
             else{
@@ -439,12 +450,13 @@ class HomeActivity : AppCompatActivity() {
                         inpName = "tullips"
 
                     for (bouquet in dataSnapshot.children) {
-                        val bouquetBean: Bouquet = Bouquet(
-                            bouquet.child("id").getValue().toString(),
-                            bouquet.child("name").getValue().toString(),
-                            bouquet.child("price").getValue().toString(),
-                            bouquet.child("flowers").getValue().toString()
-                        )
+                        val bouquetBean: Bouquet =
+                            Bouquet(
+                                bouquet.child("id").getValue().toString(),
+                                bouquet.child("name").getValue().toString(),
+                                bouquet.child("price").getValue().toString(),
+                                bouquet.child("flowers").getValue().toString()
+                            )
                         if (bouquetBean.flowers.contains(inpName)) {
                             println(bouquetBean.flowers + " " + bouquetBean.name)
 

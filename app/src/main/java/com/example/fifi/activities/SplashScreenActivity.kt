@@ -1,8 +1,9 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.fifi.R
 import java.lang.Exception
 
 class SplashScreenActivity : AppCompatActivity() {

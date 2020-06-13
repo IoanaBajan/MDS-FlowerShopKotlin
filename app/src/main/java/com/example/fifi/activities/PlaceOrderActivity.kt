@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.text.InputFilter.LengthFilter
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fifi.model.Item
+import com.example.fifi.model.Order
+import com.example.fifi.R
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_placeorder.*
 
@@ -114,15 +117,15 @@ class PlaceOrderActivity: AppCompatActivity() {
                     val orderId = ref.push().key
 
                     val order = Order
-                    order.id = orderId.toString()
-                    order.fullname = fullname
-                    order.address = address
-                    order.phonenumber = phonenumber
-                    order.payment = paymentmethod
-                    order.message = message
-                    order.date = date
-                    order.price = price
-                    order.command = comanda
+                    Order.id = orderId.toString()
+                    Order.fullname = fullname
+                    Order.address = address
+                    Order.phonenumber = phonenumber
+                    Order.payment = paymentmethod
+                    Order.message = message
+                    Order.date = date
+                    Order.price = price
+                    Order.command = comanda
 
 
                     ref.child(orderId.toString()).setValue(order).addOnCompleteListener() {

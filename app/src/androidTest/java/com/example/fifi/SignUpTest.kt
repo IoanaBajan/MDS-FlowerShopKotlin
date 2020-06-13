@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi
 
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
@@ -9,6 +9,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
+import com.example.fifi.activities.SignUpActivity
 import org.hamcrest.Matchers
 import org.junit.Assert
 import org.junit.Rule
@@ -20,7 +21,8 @@ import org.junit.runner.RunWith
 class SignUpTest {
     @Rule
     @JvmField
-    val rule: ActivityTestRule<SignUpActivity> = ActivityTestRule(SignUpActivity::class.java)
+    val rule: ActivityTestRule<SignUpActivity> = ActivityTestRule(
+        SignUpActivity::class.java)
 
     @Test
     fun useAppContext() {

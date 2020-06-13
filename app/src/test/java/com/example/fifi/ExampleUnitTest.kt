@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi
 
 import org.junit.Test
 

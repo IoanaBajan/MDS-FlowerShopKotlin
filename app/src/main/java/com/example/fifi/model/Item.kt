@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.fifi.model
 //..app/src/main/java/yourPackage/Product.kt
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

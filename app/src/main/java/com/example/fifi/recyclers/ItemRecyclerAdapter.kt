@@ -1,7 +1,7 @@
 package com.example.tes
 
-import com.example.test.Item
-import com.example.test.R
+import com.example.fifi.model.Item
+import com.example.fifi.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

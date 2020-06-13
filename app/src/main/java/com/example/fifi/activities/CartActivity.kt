@@ -1,14 +1,12 @@
-package com.example.test
+package com.example.fifi.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+import com.example.fifi.model.Item
+import com.example.fifi.R
 import com.example.tes.ItemRecyclerAdapter
 import kotlinx.android.synthetic.main.activity_shoppingcart.*
 import kotlin.properties.Delegates

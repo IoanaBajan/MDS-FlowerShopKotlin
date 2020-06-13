@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.test">
+    package="com.example.fifi">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreenActivity"
+        <activity android:name="com.example.fifi.activities.SplashScreenActivity"
             android:theme="@style/SplashTheme"
             android:noHistory="true">
             <intent-filter>
@@ -19,28 +19,28 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.MainActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".SignUpActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.SignUpActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".HomeActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.HomeActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".PlaceOrderActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.PlaceOrderActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".BouquetActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.BouquetActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".ProfileActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.ProfileActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".OrderConfirmationActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.example.fifi.activities.OrderConfirmationActivity" android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
-            android:name=".CartActivity"
+            android:name="com.example.fifi.activities.CartActivity"
             android:windowSoftInputMode="adjustResize" />
     </application>
 
