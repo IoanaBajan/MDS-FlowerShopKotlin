@@ -21,7 +21,7 @@
             android:layout_width="156dp"
             android:layout_height="157dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo"
+            android:src="@drawable/fifi2"
             android:contentDescription="TODO"></ImageView>
 
         <EditText

@@ -23,7 +23,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo"></ImageView>
+            android:src="@drawable/fifi2"></ImageView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
