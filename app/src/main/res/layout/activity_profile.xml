@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,59 +16,37 @@
     android:layout_height="wrap_content"
     android:id="@+id/layoutReset">
 
-
     <ImageButton
-        android:id="@+id/customBouquet"
-        android:layout_width="105dp"
-        android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/buton3"/>
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:layout_toEndOf="@+id/customBouquet"
-        android:layout_toRightOf="@+id/customBouquet"
-        android:background="@color/colorAccent"
-        android:src="@drawable/buton4">
-
-    </ImageButton>
-
-    <ImageButton
-        android:layout_width="100dp"
+        android:id="@+id/homeButton"
+        android:layout_width="180dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginLeft="105dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="0dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/home_icon"
-        android:id="@+id/homeButton">
-
-    </ImageButton>
+        android:layout_marginEnd="-10dp"
+        android:layout_marginRight="0dp"
+        android:contentDescription="@string/buttonHome"
+        android:background="@drawable/background_button"
+        android:src="@drawable/home_icon" />
 
     <ImageButton
-        android:layout_width="110dp"
+        android:id="@+id/customBouquet"
+        android:layout_width="200dp"
         android:layout_height="47dp"
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignLeft="@+id/button3"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginRight="-2dp"
-        android:background="@color/colorAccent"
-        android:src="@drawable/buton1">
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/background_button"
+        android:src="@drawable/buton3">
+
     </ImageButton>
 
     <TextView
@@ -113,9 +92,71 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="300dp"
         android:background="@color/colorAccent"
-        android:text="Reset password"
+        android:text="@string/Reset_password"
         android:textColor="#141315"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/feedbackText"
+        android:layout_width="377dp"
+        android:layout_height="198dp"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="107dp"
+        android:background="@color/colorText"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/sendFeedbackButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="185dp"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="343dp"
+        android:background="@color/colorAccent"
+        android:text="@string/send_feedback"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/feedbackButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorAccent"
+        android:text="@string/feedback"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/feedbackHeadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="71dp"
+        android:text="@string/feedbackHead"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

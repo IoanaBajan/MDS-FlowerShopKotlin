@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Test</string>
+
+    <string name="app_name">FIFI</string>
     <string name="register">REGISTER</string>
     <string name="sign_up_page">SIGN UP PAGE</string>
     <string name="password">Password:</string>
@@ -36,5 +37,11 @@
     <string name="wrap4">dark white wrap</string>
     <string name="wrap6">gold wrap</string>
     <string name="wrap5">pink wrap</string>
+    <string name="photo_bouquet_created"> Created bouquet</string>
+    <string name="feedback"> Leave feedback</string>
+    <string name="send_feedback"> Send feedback</string>
+    <string name="thank_feedback"> Thank you for you feedback! </string>
+    <string name="feedbackHead"> Write your feedback down below:</string>
+    <string name="Reset_password"> Reset password</string>
 
 </resources>
