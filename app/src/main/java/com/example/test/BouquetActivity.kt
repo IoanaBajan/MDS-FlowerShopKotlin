@@ -56,10 +56,11 @@ class BouquetActivity:AppCompatActivity() {
                 nrAnthurium, nrAgapanthus, nrTullips, nrLiliac)
             for (i in flowers.indices){
                 if (flowers[i].isSelected){
-                    val i: Item = Item(flowers[i].contentDescription.split(' ', '(')[0], flowers[i].contentDescription.split(' ', '(')[2],null, nrFlowers[i], totalCost)
+                    val i: Item = Item(flowers[i].contentDescription.split(' ', '(')[0], flowers[i].contentDescription.split(' ', '(')[2],null, nrFlowers[i], nrFlowers[i] * flowers[i].contentDescription.split(' ', '(')[2].toInt())
                     itemList.add(i)
                 }
             }
+
             intent.putExtra("itemList", itemList)
             startActivity(intent)
 
