@@ -15,23 +15,25 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity:AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        // connection to the home page
         val btnHome: ImageButton = findViewById(R.id.homeButton)
         btnHome.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
+        // connection to the custom bouquet page
         val btncustom: ImageButton = findViewById(R.id.customBouquet)
         btncustom.setOnClickListener {
             val intent = Intent(this, BouquetActivity::class.java)
             startActivity(intent)
         }
 
+        // sign out the client
         val btnout: Button = findViewById(R.id.SignOut)
         btnout.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -46,6 +48,9 @@ class ProfileActivity:AppCompatActivity() {
             feedbackText.visibility = View.INVISIBLE
             sendFeedbackButton.visibility = View.INVISIBLE
 
+            // dynamical/y the edit texts fot the password change
+
+            //username fields
             val username = EditText(this)
             username.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -59,7 +64,7 @@ class ProfileActivity:AppCompatActivity() {
             username.setTextColor(Color.BLACK)
             layoutReset?.addView(username)
 
-
+            // old password field
             val oldpass = EditText(this)
             oldpass.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -73,7 +78,7 @@ class ProfileActivity:AppCompatActivity() {
             oldpass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             layoutReset?.addView(oldpass)
 
-
+            // new password field
             val newpass = EditText(this)
             newpass.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -87,7 +92,7 @@ class ProfileActivity:AppCompatActivity() {
             newpass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             layoutReset?.addView(newpass)
 
-
+            // confirm password field
             val confirmpass = EditText(this)
             confirmpass.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -101,7 +106,7 @@ class ProfileActivity:AppCompatActivity() {
             confirmpass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             layoutReset?.addView(confirmpass)
 
-
+            // change the password
             val ok = Button(this)
             ok.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -124,11 +129,12 @@ class ProfileActivity:AppCompatActivity() {
                 oldpass.visibility = View.INVISIBLE
                 username.visibility = View.INVISIBLE
 
-
+                // connection to the database
                 val databaseReference = FirebaseDatabase.getInstance().getReference("clients")
 
                 val query: Query = databaseReference.orderByChild("username").equalTo(username.getText().toString().trim())
 
+                // find the user and change the password
                 query.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
@@ -170,6 +176,7 @@ class ProfileActivity:AppCompatActivity() {
 
         }
 
+        // create the feedback edit text
         val feedbackButton : Button = findViewById(R.id.feedbackButton)
         val send : Button = findViewById(R.id.sendFeedbackButton)
         val feedbackText : EditText = findViewById(R.id.feedbackText)
@@ -192,6 +199,7 @@ class ProfileActivity:AppCompatActivity() {
 
             val ref = FirebaseDatabase.getInstance().getReference("feedbacks")
 
+            // push the feedback into the database
             if(text.equals("")){
                 Toast.makeText(applicationContext, "Feedback null", Toast.LENGTH_LONG).show()
             } else {

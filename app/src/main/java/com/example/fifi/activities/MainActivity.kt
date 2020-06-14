@@ -12,6 +12,7 @@ import com.google.firebase.database.*
 
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var username: EditText
     lateinit var password: EditText
 
@@ -22,12 +23,14 @@ class MainActivity : AppCompatActivity() {
         username = findViewById(R.id.idUsername)
         password = findViewById(R.id.idPassword)
 
+        // connection to the home page
         val btnOpenActivity: Button = findViewById(R.id.idSignIn)
         btnOpenActivity.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             signin(intent)
         }
 
+        // connection to the Sign Up page
         val btnOpenActivity1: Button = findViewById(R.id.idRegister)
         btnOpenActivity1.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
@@ -37,10 +40,13 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun signin(intent: Intent) {
+        // connection to the database
         val databaseReference = FirebaseDatabase.getInstance().getReference("clients")
 
+        // find if the username typed by the user exists in the database
         val query: Query = databaseReference.orderByChild("username").equalTo(username.getText().toString().trim())
 
+        // verify is the password is correct
         query.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
@@ -54,6 +60,7 @@ class MainActivity : AppCompatActivity() {
                                     "Succes login!",
                                     Toast.LENGTH_LONG
                                 ).show()
+                                // if the login was succeded it takes you to the home page
                                 val intent = Intent(this@MainActivity, HomeActivity::class.java)
                                 startActivity(intent)
                             } else {

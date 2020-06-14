@@ -12,6 +12,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
 
+        // background set for 5 second when the app starts
         val background = object : Thread(){
             override fun run(){
                 try{

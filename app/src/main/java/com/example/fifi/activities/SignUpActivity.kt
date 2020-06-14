@@ -18,6 +18,7 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var idFirstName: EditText
     lateinit var idRegister: Button
     lateinit var idConfirm: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -30,6 +31,7 @@ class SignUpActivity : AppCompatActivity() {
         idRegister = findViewById(R.id.idRegister)
         idConfirm = findViewById(R.id.idConfirmPasswordR)
 
+        // connection to Sign Up Page
         idRegister.setOnClickListener {
             val intent = Intent(this, SignUpActivity:: class.java)
             saveClient(intent)
@@ -37,6 +39,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun saveClient(intent: Intent){
+        // get the fields completed by the user to Sign Up
         val firstName = idFirstName.text.toString().trim()
         val lastName = idLastName.text.toString().trim()
         val username = idUsernameR.text.toString().trim()
@@ -44,13 +47,16 @@ class SignUpActivity : AppCompatActivity() {
         val confirm = idConfirm.text.toString().trim()
         val mail = idEmail.text.toString().trim();
 
+        // connection to the database
         val ref = FirebaseDatabase.getInstance().getReference("clients")
 
+        // verify some conditions for the fields
         if(password.equals(confirm)) {
             if(password.length >= 4){
                 if(mail.contains("@")) {
                     val clientId = ref.push().key
 
+                    // create a Client object
                     val client = Client(
                         clientId.toString(),
                         firstName,
@@ -60,6 +66,7 @@ class SignUpActivity : AppCompatActivity() {
                         mail
                     )
 
+                    // push the new client into the database
                     ref.child(clientId.toString()).setValue(client).addOnCompleteListener() {
                         Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
                     }
