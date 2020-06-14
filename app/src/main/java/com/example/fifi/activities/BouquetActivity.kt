@@ -21,8 +21,6 @@ class BouquetActivity:AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         // urmatoarele 12 variabile vor contoriza cate flori de tipul respectiv au fost selectate(initial toate 0)
         var nrRoses = 0
         var nrGermini = 0
