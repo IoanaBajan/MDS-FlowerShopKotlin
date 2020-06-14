@@ -59,38 +59,38 @@ class ProfileActivity:AppCompatActivity() {
             val param = username.layoutParams as RelativeLayout.LayoutParams
             param.topMargin = 1060
             param.leftMargin = 360
-            username.setHint("Username")
+            username.hint = "Username"
             username.setHintTextColor(Color.BLACK)
             username.setTextColor(Color.BLACK)
             layoutReset?.addView(username)
 
             // old password field
-            val oldpass = EditText(this)
-            oldpass.layoutParams = RelativeLayout.LayoutParams(
+            val oldPass = EditText(this)
+            oldPass.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
-            val param1 = oldpass.layoutParams as RelativeLayout.LayoutParams
+            val param1 = oldPass.layoutParams as RelativeLayout.LayoutParams
             param1.setMargins(330,1160,0,0)
-            oldpass.setHint("Old password")
-            oldpass.setHintTextColor(Color.BLACK)
-            oldpass.setTextColor(Color.BLACK)
-            oldpass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            layoutReset?.addView(oldpass)
+            oldPass.hint = "Old password"
+            oldPass.setHintTextColor(Color.BLACK)
+            oldPass.setTextColor(Color.BLACK)
+            oldPass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            layoutReset?.addView(oldPass)
 
             // new password field
-            val newpass = EditText(this)
-            newpass.layoutParams = RelativeLayout.LayoutParams(
+            val newPass = EditText(this)
+            newPass.layoutParams = RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
-            val param2 = newpass.layoutParams as RelativeLayout.LayoutParams
+            val param2 = newPass.layoutParams as RelativeLayout.LayoutParams
             param2.setMargins(320,1260,0,0)
-            newpass.setHint("New password")
-            newpass.setHintTextColor(Color.BLACK)
-            newpass.setTextColor(Color.BLACK)
-            newpass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            layoutReset?.addView(newpass)
+            newPass.hint = "New password"
+            newPass.setHintTextColor(Color.BLACK)
+            newPass.setTextColor(Color.BLACK)
+            newPass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            layoutReset?.addView(newPass)
 
             // confirm password field
             val confirmpass = EditText(this)
@@ -100,7 +100,7 @@ class ProfileActivity:AppCompatActivity() {
             )
             val param3 = confirmpass.layoutParams as RelativeLayout.LayoutParams
             param3.setMargins(300,1360,0,0)
-            confirmpass.setHint("Confirm password")
+            confirmpass.hint = "Confirm password"
             confirmpass.setHintTextColor(Color.BLACK)
             confirmpass.setTextColor(Color.BLACK)
             confirmpass.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
@@ -114,7 +114,7 @@ class ProfileActivity:AppCompatActivity() {
             )
             val param4 = ok.layoutParams as RelativeLayout.LayoutParams
             param4.setMargins(350,1560,200,0)
-            ok.setHint("Reset")
+            ok.hint = "Reset"
             ok.setHintTextColor(Color.BLACK)
             ok.setBackgroundResource(R.drawable.button2_background)
             layoutReset?.addView(ok)
@@ -125,14 +125,14 @@ class ProfileActivity:AppCompatActivity() {
                 reset.visibility = View.VISIBLE
                 ok.visibility = View.INVISIBLE
                 confirmpass.visibility = View.INVISIBLE
-                newpass.visibility = View.INVISIBLE
-                oldpass.visibility = View.INVISIBLE
+                newPass.visibility = View.INVISIBLE
+                oldPass.visibility = View.INVISIBLE
                 username.visibility = View.INVISIBLE
 
                 // connection to the database
                 val databaseReference = FirebaseDatabase.getInstance().getReference("clients")
 
-                val query: Query = databaseReference.orderByChild("username").equalTo(username.getText().toString().trim())
+                val query: Query = databaseReference.orderByChild("username").equalTo(username.text.toString().trim())
 
                 // find the user and change the password
                 query.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -141,16 +141,16 @@ class ProfileActivity:AppCompatActivity() {
                             for (client in dataSnapshot.children) {
                                 val usersBean: Client = client.getValue<Client>(
                                     Client::class.java) ?: throw IllegalArgumentException("Name required")
-                                if (usersBean.password.equals(oldpass.getText().toString().trim())) {
-                                    if(newpass.getText().toString().equals(confirmpass.getText().toString())){
-                                            var newpass1 = newpass.getText().toString().trim()
+                                if (usersBean.password == oldPass.text.toString().trim()) {
+                                    if(newPass.text.toString() == confirmpass.text.toString()){
+                                            val newPass1 = newPass.text.toString().trim()
                                             val cli =
                                                 Client(
                                                     usersBean.id,
                                                     usersBean.firstName,
                                                     usersBean.lastName,
                                                     usersBean.username,
-                                                    newpass1,
+                                                    newPass1,
                                                     usersBean.email
                                                 )
                                             databaseReference.child(usersBean.id).setValue(cli)
@@ -200,7 +200,7 @@ class ProfileActivity:AppCompatActivity() {
             val ref = FirebaseDatabase.getInstance().getReference("feedbacks")
 
             // push the feedback into the database
-            if(text.equals("")){
+            if(text == ""){
                 Toast.makeText(applicationContext, "Feedback null", Toast.LENGTH_LONG).show()
             } else {
                 val feedbackId = ref.push().key

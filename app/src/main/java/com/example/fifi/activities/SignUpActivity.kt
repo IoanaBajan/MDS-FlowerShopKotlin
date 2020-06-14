@@ -11,13 +11,13 @@ import com.example.fifi.R
 import com.google.firebase.database.FirebaseDatabase
 
 class SignUpActivity : AppCompatActivity() {
-    lateinit var idUsernameR: EditText
-    lateinit var idPasswordR: EditText
-    lateinit var idEmail: EditText
-    lateinit var idLastName: EditText
-    lateinit var idFirstName: EditText
-    lateinit var idRegister: Button
-    lateinit var idConfirm: EditText
+    private lateinit var idUsernameR: EditText
+    private lateinit var idPasswordR: EditText
+    private lateinit var idEmail: EditText
+    private lateinit var idLastName: EditText
+    private lateinit var idFirstName: EditText
+    private lateinit var idRegister: Button
+    private lateinit var idConfirm: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,13 +45,13 @@ class SignUpActivity : AppCompatActivity() {
         val username = idUsernameR.text.toString().trim()
         val password = idPasswordR.text.toString().trim()
         val confirm = idConfirm.text.toString().trim()
-        val mail = idEmail.text.toString().trim();
+        val mail = idEmail.text.toString().trim()
 
         // connection to the database
         val ref = FirebaseDatabase.getInstance().getReference("clients")
 
         // verify some conditions for the fields
-        if(password.equals(confirm)) {
+        if(password == confirm) {
             if(password.length >= 4){
                 if(mail.contains("@")) {
                     val clientId = ref.push().key
@@ -67,7 +67,7 @@ class SignUpActivity : AppCompatActivity() {
                     )
 
                     // push the new client into the database
-                    ref.child(clientId.toString()).setValue(client).addOnCompleteListener() {
+                    ref.child(clientId.toString()).setValue(client).addOnCompleteListener {
                         Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
                     }
                 }

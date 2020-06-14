@@ -19,6 +19,7 @@ class BouquetActivity:AppCompatActivity() {
     var itemList: ArrayList<Item> = ArrayList()
     var totalCost = 0
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -58,7 +59,7 @@ class BouquetActivity:AppCompatActivity() {
                 nrAnthurium, nrAgapanthus, nrTullips, nrLiliac)
             for (i in flowers.indices){
                 if (flowers[i].isSelected){
-                    val i: Item =
+                    val i =
                         Item(
                             flowers[i].contentDescription.split(
                                 ' ',
@@ -125,10 +126,10 @@ class BouquetActivity:AppCompatActivity() {
 
             text = text.plus("Ornaments: ")
             val ornaments = arrayOf(buttonOrnament1, buttonOrnament2, buttonOrnament3, buttonOrnament4)
-            var selected = false;
+            var selected = false
             for(i in ornaments.indices){
                 if(ornaments[i].isSelected){
-                    selected = true;
+                    selected = true
                     text = text.plus(ornaments[i].contentDescription).plus(", ")
                 }
             }
@@ -136,12 +137,12 @@ class BouquetActivity:AppCompatActivity() {
                 text = text.plus("None")
             }
             text += ("\n")
-            selected = false;
+            selected = false
             val wraps = arrayOf(buttonWrap1, buttonWrap2, buttonWrap3, buttonWrap4, buttonWrap5, buttonWrap6)
             text += ("The wrap of the bouquet: ")
             for(i in wraps.indices){
                 if(wraps[i].isSelected){
-                    selected = true;
+                    selected = true
                     text = text.plus(wraps[i].contentDescription).plus('\n')
                 }
 

@@ -9,13 +9,10 @@ import com.example.fifi.model.Item
 import com.example.fifi.R
 import com.example.tes.ItemRecyclerAdapter
 import kotlinx.android.synthetic.main.activity_shoppingcart.*
-import kotlin.properties.Delegates
-
 
 class CartActivity:AppCompatActivity() {
     private lateinit var itemAdapter: ItemRecyclerAdapter
-    var itemList: ArrayList<Item> = ArrayList()
-    private var totalPrice by Delegates.notNull<Int>()
+    private var itemList: ArrayList<Item> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,6 +14,8 @@ import com.example.fifi.model.Item
 import com.example.fifi.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class HomeActivity : AppCompatActivity() {
 
@@ -25,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        var  myImageList = intArrayOf(
+        val  myImageList = intArrayOf(
             R.drawable.f1,
             R.drawable.f10,
             R.drawable.f11,
@@ -86,7 +88,7 @@ class HomeActivity : AppCompatActivity() {
         val idbutton17: Button = findViewById(R.id.button17)
         val idbutton18: Button = findViewById(R.id.button18)
         idbutton1.setOnClickListener {
-            var i = Item("Scented Lavender", "230", "f1")
+            val i = Item("Scented Lavender", "230", "f1")
             if(products.find{it.name == "Scented Lavender"} == null)
                 products.add(i)
             else{
@@ -98,7 +100,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton2.setOnClickListener {
-            var i = Item("Simply Pink", "150", "f1")
+            val i = Item("Simply Pink", "150", "f1")
             if(products.find{it.name == "Simply Pink"} == null)
                 products.add(i)
             else{
@@ -110,7 +112,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton3.setOnClickListener {
-            var i = Item("Rose bud", "140", "f1")
+            val i = Item("Rose bud", "140", "f1")
             if(products.find{it.name == "Rose bud"} == null)
                 products.add(i)
             else{
@@ -122,7 +124,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton4.setOnClickListener {
-            var i = Item("Peonies", "250", "f1")
+            val i = Item("Peonies", "250", "f1")
             if(products.find{it.name == "Peonies"} == null)
                 products.add(i)
             else{
@@ -134,7 +136,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton5.setOnClickListener {
-            var i = Item("Romantic", "300", "f1")
+            val i = Item("Romantic", "300", "f1")
             if(products.find{it.name == "Romantic"} == null)
                 products.add(i)
             else{
@@ -146,7 +148,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton6.setOnClickListener {
-            var i = Item("Blue Bell", "160", "f1")
+            val i = Item("Blue Bell", "160", "f1")
             if(products.find{it.name == "Blue Bell"} == null)
                 products.add(i)
             else{
@@ -158,7 +160,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton7.setOnClickListener {
-            var i = Item("Blues", "250", "f1")
+            val i = Item("Blues", "250", "f1")
             if(products.find{it.name == "Blues"} == null)
                 products.add(i)
             else{
@@ -170,7 +172,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton8.setOnClickListener {
-            var i = Item("Casa Blanca", "125", "f1")
+            val i = Item("Casa Blanca", "125", "f1")
             if(products.find{it.name == "Casa Blanca"} == null)
                 products.add(i)
             else{
@@ -182,7 +184,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton9.setOnClickListener {
-            var i = Item("Citrus", "200", "f1")
+            val i = Item("Citrus", "200", "f1")
             if(products.find{it.name == "Citrus"} == null)
                 products.add(i)
             else{
@@ -194,7 +196,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton10.setOnClickListener {
-            var i = Item("Glaze", "150", "f1")
+            val i = Item("Glaze", "150", "f1")
             if(products.find{it.name == "Glaze"} == null)
                 products.add(i)
             else{
@@ -206,7 +208,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton11.setOnClickListener {
-            var i = Item("Godess", "250", "f1")
+            val i = Item("Godess", "250", "f1")
             if(products.find{it.name == "Godess"} == null)
                 products.add(i)
             else{
@@ -218,7 +220,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton12.setOnClickListener {
-            var i = Item("Purity", "130", "f1")
+            val i = Item("Purity", "130", "f1")
             if(products.find{it.name == "Purity"} == null)
                 products.add(i)
             else{
@@ -230,7 +232,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton13.setOnClickListener {
-            var i = Item("Snapdragons", "150", "f1")
+            val i = Item("Snapdragons", "150", "f1")
             if(products.find{it.name == "Snapdragons"} == null)
                 products.add(i)
             else{
@@ -242,7 +244,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton14.setOnClickListener {
-            var i = Item("Scented Spring", "170", "f1")
+            val i = Item("Scented Spring", "170", "f1")
             if(products.find{it.name == "Scented Spring"} == null)
                 products.add(i)
             else{
@@ -254,7 +256,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton15.setOnClickListener {
-            var i = Item("Secret Garden", "230", "f1")
+            val i = Item("Secret Garden", "230", "f1")
             if(products.find{it.name == "Secret Garden"} == null)
                 products.add(i)
             else{
@@ -266,7 +268,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton16.setOnClickListener {
-            var i = Item("Star Gazer", "200", "f1")
+            val i = Item("Star Gazer", "200", "f1")
             if(products.find{it.name == "Star Gazer"} == null)
                 products.add(i)
             else{
@@ -278,7 +280,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton17.setOnClickListener {
-            var i = Item("Topaz", "200", "f1")
+            val i = Item("Topaz", "200", "f1")
             if(products.find{it.name == "Topaz"} == null)
                 products.add(i)
             else{
@@ -290,7 +292,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         idbutton18.setOnClickListener {
-            var i = Item("Tulips", "110", "f1")
+            val i = Item("Tulips", "110", "f1")
             if(products.find{it.name == "Tulips"} == null)
                 products.add(i)
             else{
@@ -304,7 +306,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    fun showSearchBox() {
+    private fun showSearchBox() {
         // create edit text
         searchBar = EditText(this)
 
@@ -321,14 +323,14 @@ class HomeActivity : AppCompatActivity() {
         searchBar.setBackgroundColor(Color.WHITE)
         searchBar.setTextColor(Color.BLACK)
         searchBar.setHintTextColor(Color.GRAY)
-        searchBar.setHint("Cauta florile tale preferate")
-        searchBar.paint.color = Color.BLACK;
+        searchBar.hint = "Cauta florile tale preferate"
+        searchBar.paint.color = Color.BLACK
 
         // add edit text
         idSearchLayout?.addView(searchBar)
 
         // the search beggins after the user presses enter
-        searchBar.setOnKeyListener(View.OnKeyListener { view, keyCode, event ->
+        searchBar.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
                 // select all text views containing the bouquet names
                 // and set text color to black to cancel the modifications made to text from previous searches
@@ -404,13 +406,13 @@ class HomeActivity : AppCompatActivity() {
                 t = findViewById(R.id.Tulips)
                 t.setTextColor(Color.BLACK)
 
-                // beefore pressing enter, the user must write something in the edit text
-                if (!(searchBar.text.toString().trim().toLowerCase().equals(""))) {
+                // before pressing enter, the user must write something in the edit text
+                if (searchBar.text.toString().trim().toLowerCase(Locale.ROOT) != "") {
 
-                    searchBouquetsByFlower(searchBar.text.toString().trim().toLowerCase())
+                    searchBouquetsByFlower(searchBar.text.toString().trim().toLowerCase(Locale.ROOT))
                 }
                 // delete search bar
-                (searchBar.getParent() as ViewManager).removeView(searchBar)
+                (searchBar.parent as ViewManager).removeView(searchBar)
                 return@OnKeyListener true
             }
             false
@@ -419,121 +421,121 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun flipperImages(image:Int) {
-        var imageView : ImageView = ImageView(this)
+        val imageView = ImageView(this)
 
         imageView.setBackgroundResource(image)
         v_flipper.addView(imageView)
-        v_flipper.setFlipInterval(4000)
-        v_flipper.setAutoStart(true)
+        v_flipper.flipInterval = 4000
+        v_flipper.isAutoStart = true
 
         v_flipper.setInAnimation(this,android.R.anim.slide_in_left)
         v_flipper.setOutAnimation(this,android.R.anim.slide_out_right)
 
     }
 
-    fun searchBouquetsByFlower(inputName: String) {
+    private fun searchBouquetsByFlower(inputName: String) {
         // get database reference
-        var database: DatabaseReference = FirebaseDatabase.getInstance().getReference("bouquets")
+        val database: DatabaseReference = FirebaseDatabase.getInstance().getReference("bouquets")
         // order by flower names
         val query: Query = database.orderByChild("flowers")
 
         query.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                TODO("not implemented")
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     var inpName = inputName
 
-                    if (inputName.equals("tulips"))
+                    if (inputName == "tulips")
                         inpName = "tullips"
 
                     for (bouquet in dataSnapshot.children) {
-                        val bouquetBean: Bouquet =
+                        val bouquetBean =
                             Bouquet(
-                                bouquet.child("id").getValue().toString(),
-                                bouquet.child("name").getValue().toString(),
-                                bouquet.child("price").getValue().toString(),
-                                bouquet.child("flowers").getValue().toString()
+                                bouquet.child("id").value.toString(),
+                                bouquet.child("name").value.toString(),
+                                bouquet.child("price").value.toString(),
+                                bouquet.child("flowers").value.toString()
                             )
                         if (bouquetBean.flowers.contains(inpName)) {
                             println(bouquetBean.flowers + " " + bouquetBean.name)
 
-                            // select all textviews with bouquet name
+                            // select all textViews with bouquet name
                             //1
                             var t: TextView = findViewById(R.id.ScentedLavander)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //2
                             t = findViewById(R.id.SimplyPink)
-                            if (bouquetBean.name.equals("Simply pink")) // change name so it  can be compared with the one in DB
-                                if (t.text.equals("Simply Pink"))
+                            if (bouquetBean.name == "Simply pink") // change name so it  can be compared with the one in DB
+                                if (t.text == "Simply Pink")
                                     t.setTextColor(Color.MAGENTA)
                             //3
                             t = findViewById(R.id.name3)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //4
                             t = findViewById(R.id.Peonies)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //5
                             t = findViewById(R.id.name5)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //6
                             t = findViewById(R.id.BlueBell)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //7
                             t = findViewById(R.id.name7)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //8
                             t = findViewById(R.id.CasaBlanca)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //9
                             t = findViewById(R.id.name9)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //10
                             t = findViewById(R.id.Glaze)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //11
                             t = findViewById(R.id.name11)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //12
                             t = findViewById(R.id.Purity)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //13
                             t = findViewById(R.id.name13)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //14
                             t = findViewById(R.id.ScentedSpring)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //15
                             t = findViewById(R.id.name15)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //16
                             t = findViewById(R.id.StarGazer)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //17
                             t = findViewById(R.id.name17)
-                            if (t.text.equals(bouquetBean.name))
+                            if (t.text == bouquetBean.name)
                                 t.setTextColor(Color.MAGENTA)
                             //18
                             t = findViewById(R.id.Tulips)
-                            if (bouquetBean.name.equals("Tullips")) // change name so it can be compared with the one in DB
-                                if (t.text.equals("Tulips"))
+                            if (bouquetBean.name == "Tullips") // change name so it can be compared with the one in DB
+                                if (t.text == "Tulips")
                                     t.setTextColor(Color.MAGENTA)
                         }
                     }

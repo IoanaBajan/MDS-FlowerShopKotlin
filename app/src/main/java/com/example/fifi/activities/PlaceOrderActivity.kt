@@ -1,5 +1,6 @@
 package com.example.fifi.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
@@ -15,20 +16,21 @@ import kotlinx.android.synthetic.main.activity_placeorder.*
 
 
 class PlaceOrderActivity: AppCompatActivity() {
-    lateinit var card: RadioButton
-    lateinit var placeOrder: Button
-    lateinit var idfullname: EditText
-    lateinit var idphonenumber: EditText
-    lateinit var idaddress: EditText
-    lateinit var idradiogroup: RadioGroup
-    lateinit var idmessage: EditText
-    lateinit var datePicker: DatePicker
-    lateinit var showCost :TextView
-    lateinit var showComanda:TextView
-    var comanda :String = ""
-    var totalCost :Int = 0
-    var ok:Boolean = false
+    private lateinit var card: RadioButton
+    private lateinit var placeOrder: Button
+    private lateinit var idfullname: EditText
+    private lateinit var idphonenumber: EditText
+    private lateinit var idaddress: EditText
+    private lateinit var idradiogroup: RadioGroup
+    private lateinit var idmessage: EditText
+    private lateinit var datePicker: DatePicker
+    private lateinit var showCost :TextView
+    private lateinit var showComanda:TextView
+    private var comanda :String = ""
+    private var totalCost :Int = 0
+    private var ok:Boolean = false
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         var itemList: ArrayList<Item> = ArrayList()
         super.onCreate(savedInstanceState)
@@ -43,62 +45,47 @@ class PlaceOrderActivity: AppCompatActivity() {
         idradiogroup = findViewById(R.id.radioGroup)
         idmessage = findViewById(R.id.idMessage)
         datePicker= findViewById(R.id.idDatePicker)
+
+        // get items from the shopping cart to display order summary
         if (intent != null) {
             itemList = intent.getSerializableExtra("itemList") as ArrayList<Item>
-
         }
+
+        // compute total price
         for (item in itemList) {
             totalCost += item.totalPrice!!.toInt()
             comanda +=item.name + " " + item.amount + "\n"
         }
 
+        // when card payment is selected, display further info such as cvv and card number
         card.setOnClickListener {
             cardDetails()
         }
 
         showCost = findViewById(R.id.cost)
-        showCost.setText("Total price :" + totalCost+ "lei")
+        showCost.text = "Total price :" + totalCost + "lei"
 
         showComanda = findViewById(R.id.comanda)
-        showComanda.setText(comanda)
+        showComanda.text = comanda
 
         val param = showComanda.layoutParams as LinearLayout.LayoutParams
         param.height = itemList.size*90
 
 
         placeOrder.setOnClickListener{
-            //            val recipient = "alinamocanu2@gmail.com".trim()
-//            val subject = "Comanda dumneavoastra!".trim()
-//           val message = "Comanda a fost plasata !".trim()
-//           sendEmail(recipient, subject, message)
             saveOrder()
             val intent = Intent(this@PlaceOrderActivity, OrderConfirmationActivity::class.java)
             startActivity(intent)
         }
     }
 
-//    private fun sendEmail(recipient:String, subject: String, message: String) {
-//        val mIntent = Intent(Intent.ACTION_SEND)
-//        mIntent.data = Uri.parse("mailto:")
-//        mIntent.type = "text/plain"
-//        mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
-//        mIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
-//        mIntent.putExtra(Intent.EXTRA_TEXT, message)
-//
-//        try {
-//            startActivity(Intent.createChooser(mIntent, "Choose Email Client..."))
-//        }
-//        catch (e: Exception){
-//            Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-//        }
-//}
-
+    // add order to database
     private fun saveOrder(){
-        val fullname = idfullname.text.toString().trim()
-        val address = idaddress.text.toString().trim();
-        val phonenumber = idphonenumber.text.toString().trim();
+        val fullName = idfullname.text.toString().trim()
+        val address = idaddress.text.toString().trim()
+        val phoneNumber = idphonenumber.text.toString().trim()
         val payment = idradiogroup.checkedRadioButtonId
-        val paymentmethod = resources.getResourceEntryName(payment)
+        val paymentMethod = resources.getResourceEntryName(payment)
         val price = showCost.text.toString().trim()
         val comanda = showComanda.text.toString().trim()
 
@@ -107,28 +94,29 @@ class PlaceOrderActivity: AppCompatActivity() {
         val day = datePicker.dayOfMonth
         val month = datePicker.month + 1
         val year = datePicker.year
-        var date = day.toString()+ "/" + month.toString() + "/" + year.toString()
+        var date = "$day/$month/$year"
         date = date.trim()
         val ref = FirebaseDatabase.getInstance().getReference("orders")
 
-        if(fullname.length != 0) {
-            if(address.length != 0){
-                if(phonenumber.length != 0 && phonenumber.contains("07")){
+        // all fields must be filled
+        if(fullName.isNotEmpty()) {
+            if(address.isNotEmpty()){
+                if(phoneNumber.isNotEmpty() && phoneNumber.contains("07")){
                     val orderId = ref.push().key
 
                     val order = Order
                     Order.id = orderId.toString()
-                    Order.fullname = fullname
+                    Order.fullname = fullName
                     Order.address = address
-                    Order.phonenumber = phonenumber
-                    Order.payment = paymentmethod
+                    Order.phonenumber = phoneNumber
+                    Order.payment = paymentMethod
                     Order.message = message
                     Order.date = date
                     Order.price = price
                     Order.command = comanda
 
-
-                    ref.child(orderId.toString()).setValue(order).addOnCompleteListener() {
+                    // display toast message to notify user the form is completed correctly
+                    ref.child(orderId.toString()).setValue(order).addOnCompleteListener {
                         Toast.makeText(applicationContext, "Succes!", Toast.LENGTH_LONG).show()
                     }
                 }
@@ -139,6 +127,7 @@ class PlaceOrderActivity: AppCompatActivity() {
         else Toast.makeText(applicationContext, "Name must not be null", Toast.LENGTH_LONG).show()
     }
 
+    // display all necessary info for card payment when it is selected
     private fun cardDetails() {
         if (card.isChecked && !ok) {
             ok = true
@@ -149,13 +138,13 @@ class PlaceOrderActivity: AppCompatActivity() {
             )
 
             val maxLength1 = 16
-            nrCard.setFilters(arrayOf<InputFilter>(LengthFilter(maxLength1)))
+            nrCard.filters = arrayOf<InputFilter>(LengthFilter(maxLength1))
 
             val param = nrCard.layoutParams as LinearLayout.LayoutParams
             param.setMargins(80,0,0,10)
 
 
-            nrCard.setHint("Numar card")
+            nrCard.hint = "Numar card"
             layoutCard?.addView(nrCard)
 
             val cvv= EditText(this)
@@ -165,12 +154,12 @@ class PlaceOrderActivity: AppCompatActivity() {
             )
 
             val maxLength = 3
-            cvv.setFilters(arrayOf<InputFilter>(LengthFilter(maxLength)))
+            cvv.filters = arrayOf<InputFilter>(LengthFilter(maxLength))
 
             val param1 = cvv.layoutParams as LinearLayout.LayoutParams
             param1.setMargins(80,20,0,10)
 
-            cvv.setHint("CVV")
+            cvv.hint = "CVV"
             layoutCard?.addView(cvv)
         }
     }

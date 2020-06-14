@@ -13,7 +13,7 @@ import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var username: EditText
+    private lateinit var username: EditText
     lateinit var password: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val btnOpenActivity: Button = findViewById(R.id.idSignIn)
         btnOpenActivity.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            signin(intent)
+            signIn(intent)
         }
 
         // connection to the Sign Up page
@@ -39,22 +39,21 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun signin(intent: Intent) {
+    private fun signIn(intent: Intent) {
         // connection to the database
         val databaseReference = FirebaseDatabase.getInstance().getReference("clients")
 
         // find if the username typed by the user exists in the database
-        val query: Query = databaseReference.orderByChild("username").equalTo(username.getText().toString().trim())
+        val query: Query = databaseReference.orderByChild("username").equalTo(username.text.toString().trim())
 
         // verify is the password is correct
         query.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    var client:DataSnapshot
                     for (client in dataSnapshot.children) {
                         val usersBean: Client = client.getValue<Client>(
                             Client::class.java) ?: throw IllegalArgumentException("Name required")
-                            if (usersBean.password.equals(password.getText().toString().trim())) {
+                            if (usersBean.password == password.text.toString().trim()) {
                                 Toast.makeText(
                                     applicationContext,
                                     "Succes login!",
