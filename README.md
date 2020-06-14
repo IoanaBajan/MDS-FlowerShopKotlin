@@ -12,3 +12,7 @@ First, the user must log in(enter the username and password) to see the features
 The user can change his password anytime and he also can leave a feedback.
 
 <a href="url"><img src="screenshots/profile.jpg"  height="400" width="250"></a>
+
+The user can see the bouquets he chose in the shopping cart, change quantity and then place the order by completing a form.
+
+<a href="url"><img src="screenshots/cart.jpg"  height="400" width="250"></a>
