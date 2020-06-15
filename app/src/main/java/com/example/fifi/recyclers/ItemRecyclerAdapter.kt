@@ -11,8 +11,11 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.cart_item_layout.view.*
 
 class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
+    //The view holder objects are managed by the ItemRecyclerAdapter
+    //The adapter creates view holders as needed(if the users scrolls down/up)
     var items: List<Item> = ArrayList()
+
+    //The adapter  binds the view holders to their data calling the onBindViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ItemViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.cart_item_layout,parent, false)
@@ -22,19 +25,15 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override  fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
+            //It assigns the view holder to a position, and calls the bind method in order to
+            // assign the data
+            // That method uses the view holder's position to determine what the contents
+            // should be, based on its list position.
             is ItemViewHolder -> {
                 holder.bind(items.get(position))
             }
         }
 
-
-    }
-
-    fun deleteItem(pos: Int){
-        println("-----------" + items.toString())
-        items.drop(pos)
-        this.notifyDataSetChanged()
-        println(items.toString())
 
     }
 
@@ -45,6 +44,9 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         items = itemList
     }
 
+    //assigns all data to each product- an itemViewHolder is in charge of displaying one single item
+    //with a view
+    //sets price,name,amount,totalprice(depending on number of products selected with elegant button)
     class ItemViewHolder constructor(
         itemView:View
     ):RecyclerView.ViewHolder(itemView){
@@ -52,16 +54,8 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         val price = itemView.calc_price
         val name = itemView.txt_product_name
         var amount = itemView.amount
-        var btnDelete = itemView.delete
 
         fun bind(item: Item){
-            btnDelete.setOnClickListener {
-                layoutPosition.also { currentPosition ->
-                        var i: ItemRecyclerAdapter = ItemRecyclerAdapter()
-                            i.deleteItem(currentPosition)
-                }
-
-            }
             item.totalPrice = item.price!!.toInt()
             item.amount = 1
             amount.setOnValueChangeListener { view, oldValue, newValue ->
@@ -70,20 +64,15 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     item.totalPrice = item.totalPrice!! - item.price!!.toInt()
                 } else
                     item.totalPrice = item.totalPrice!! + item.price!!.toInt()
-                println("AICI ESTE PRETUL TOTAL BOSS")
-                println(item.totalPrice!!)
                 item.amount = new
                 val p = new * (item.price?.toInt() ?:1)
                 price.setText(p.toString())
 
             }
-            println("CANTITAAAAAAATE ")
-            println(item.amount!!)
             name.setText(item.name)
             price.setText(item.price)
 
-
-
+            //assigns a photo depending on item's name
             val requestOption = RequestOptions()
                 .placeholder(R.drawable.fifi)
                 .error(R.drawable.fifi)

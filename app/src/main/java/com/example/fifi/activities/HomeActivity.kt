@@ -27,6 +27,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        //image list that will be shown in the photo gallery
         val  myImageList = intArrayOf(
             R.drawable.f1,
             R.drawable.f10,
@@ -39,17 +41,21 @@ class HomeActivity : AppCompatActivity() {
             R.drawable.f17,
             R.drawable.f18
         )
+        //get the flipper(container for gallery) from layout
         v_flipper = findViewById(R.id.v_flipper)
         for (img in myImageList) {
+            //call function which assigns each photo to the flipper
             flipperImages(img)
         }
 
+        //listener for menu button which connects the page with custom bouquet page
         val idcustom: ImageButton = findViewById(R.id.customBouquet)
         idcustom.setOnClickListener {
             val intent = Intent(this@HomeActivity, BouquetActivity::class.java)
             startActivity(intent)
         }
 
+        //listener for menu button which connects the page with profile page
         val btnprofile: ImageButton= findViewById(R.id.profile)
         btnprofile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
@@ -57,10 +63,11 @@ class HomeActivity : AppCompatActivity() {
         }
 
         searchBtn = findViewById(R.id.idSearchBtn)
-
         searchBtn.setOnClickListener {
             showSearchBox()
         }
+
+        //listener for menu button which connects the page with custom shopcart page
         val shopCart: ImageButton = findViewById(R.id.cart)
         shopCart.setOnClickListener {
             val intent = Intent(this@HomeActivity, CartActivity::class.java)
@@ -68,7 +75,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        // get the "ADD TO CART" buttons from layout
         val idbutton1: Button = findViewById(R.id.button1)
         val idbutton2: Button = findViewById(R.id.button2)
         val idbutton3: Button = findViewById(R.id.button3)
@@ -87,6 +94,9 @@ class HomeActivity : AppCompatActivity() {
         val idbutton16: Button = findViewById(R.id.button16)
         val idbutton17: Button = findViewById(R.id.button17)
         val idbutton18: Button = findViewById(R.id.button18)
+
+        //verify if each product is selected only once and add it to the list that will be sent to
+        //the shoping cart
         idbutton1.setOnClickListener {
             val i = Item("Scented Lavender", "230", "f1")
             if(products.find{it.name == "Scented Lavender"} == null)
@@ -421,6 +431,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun flipperImages(image:Int) {
+        //for image screats an image view in the flipper
+        //sets time to display the image, in which way it should slide, if the flipper should
+        // automatically start sliding photos
         val imageView = ImageView(this)
 
         imageView.setBackgroundResource(image)
