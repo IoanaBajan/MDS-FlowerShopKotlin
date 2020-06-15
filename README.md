@@ -17,6 +17,9 @@ The user can see the bouquets he chose in the shopping cart, change quantity and
 
 <a href="url"><img src="screenshots/cart.jpg"  height="400" width="250"></a>
 
+All data(about clients, orders, feedbacks and bouquets) is stored in Firebase:
+
+<a href="url"><img src="screenshots/database.jpg"  height="300" width="450"></a>
 
 ## Demo link: 
 https://www.youtube.com/watch?v=K4xqZvCbMlc&feature=youtu.be
