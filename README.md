@@ -23,3 +23,9 @@ All data(about clients, orders, feedbacks and bouquets) is stored in Firebase:
 
 ## Demo link: 
 https://www.youtube.com/watch?v=K4xqZvCbMlc&feature=youtu.be
+
+## Documentation:
+https://github.com/IoanaBajan/MDS-FlowerShopKotlin/blob/master/Documentation.pdf
+
+## Trello link for task management:
+https://trello.com/b/DLOmV5lk/florarie-digitala
